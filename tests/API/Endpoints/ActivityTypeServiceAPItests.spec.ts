@@ -14,10 +14,16 @@ test.describe('Authorized', () => {
     });
 
     test.describe('GET', () => {
-        test('Get by ID = Empty',async({request}) =>{
+        test('Get',async({request}) =>{
             const query = new DepartmentFinancesAPI(request);
                 const get_status = await query.GetRequest(tokenValueADMIN,"services/app/ActivityTypeService/Get");
                 expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+        })
+
+        test('Get by ID = Empty',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/ActivityTypeService/Get?id=");
+                expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
         })
 
         for (const id of data.ActivityTypeServiceID) {
