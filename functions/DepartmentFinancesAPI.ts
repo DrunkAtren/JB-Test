@@ -8,11 +8,20 @@ export class DepartmentFinancesAPI{
 
     async GetRequest(token,getRequest)
     {
-        const response =  await this.request.get(baseUrl +getRequest,
+        const response =  await this.request.get(baseUrl+getRequest,
         {
             headers: {'Authorization': `Bearer ${token}`}
         });
         
+        return await this.Response(response);
+    };
+
+    async PostRequest(token, postRequest, postData){
+        const response = await this.request.post(baseUrl+postRequest, 
+        {
+            headers: {'Authorization': `Bearer ${token}`},
+            data: postData
+        });
         return await this.Response(response);
     };
 
