@@ -128,5 +128,15 @@ test.describe('Authorized', () => {
                     expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
             })
         }
-    });     
+    });
+    test.describe('POST', () => {
+        //Subaccountid statyczne 15, jak bedzie wywalac błąd to przez brak takiego subaccount prawdopodobnie
+        test("Create", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/EstimatedExpenseService/Create",data.EstimatedExpenseServicePOSTDATA );
+            const body = status[1] 
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+        });
+    });   
 });

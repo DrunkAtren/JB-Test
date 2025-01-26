@@ -40,5 +40,30 @@ test.describe('Authorized', () => {
                 expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
         })
     });
-                
+
+    test.describe('POST', () => {
+        test('Create with template '+ data.ActivityTypeServicePOSTDATA.name, async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/ActivityTypeService/Create", data.ActivityTypeServicePOSTDATA);
+            const body = status[1] 
+            const id = body.result
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+            const status2 = await query.DeleteRequest(tokenValueADMIN,  "services/app/ActivityTypeService/Delete?id="+ id);
+            expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+        });
+    });
+
+    test.describe('DELETE', () => {
+        test('Delete with template '+ data.ActivityTypeServiceDELETEPOSTDATA.name, async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/ActivityTypeService/Create", data.ActivityTypeServiceDELETEPOSTDATA);
+            const body = status[1] 
+            const id = body.result
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+            const status2 = await query.DeleteRequest(tokenValueADMIN,  "services/app/ActivityTypeService/Delete?id="+ id);
+            expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+        });
+    });          
 });

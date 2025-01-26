@@ -253,5 +253,22 @@ test.describe('Authorized', () => {
                     expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
             })
         }
-    });     
+    });
+    test.describe('POST', () => {
+        test("Create with template '" + data.OrderServicePOSTDATA.description+"'", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/OrderService/Create",data.OrderServicePOSTDATA);
+            const body = status[1] 
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+        });
+
+        test("CreateMultiple ", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/OrderService/CreateMultiple",data.OrderServicePOSTDATA);
+            const body = status[1] 
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+        });
+    }); 
 });

@@ -125,5 +125,57 @@ test.describe('Authorized', () => {
                     expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
             })
         }
-    });     
+    });
+    test.describe('POST', () => {
+        test("CreateInvoice with template '"+data.InvoiceServicePOSTDATA.description+"'", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceService/CreateInvoice",data.InvoiceServicePOSTDATA);
+            const body = status[1] 
+            const id = body.result
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+            const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/InvoiceService/DeleteOne?id="+ id);
+            expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+        });
+
+        test("CreateMultiple", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceService/CreateInvoice",data.InvoiceServiceMULTIPLEPOSTDATA);
+            const body = status[1] 
+            const id = body.result
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+            const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/InvoiceService/DeleteOne?id="+ id);
+            expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+        });
+    });
+
+    test.describe('DELETE', () => {
+        test("DeleteOne", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceService/CreateInvoice",data.InvoiceServiceMULTIPLEPOSTDATA);
+            const body = status[1] 
+            const id = body.result
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+            const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/InvoiceService/DeleteOne?id="+ id);
+            expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+        });
+
+        test("DeleteMultiple", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceService/CreateInvoice",data.InvoiceServiceMULTIPLEPOSTDATA);
+            const body = status[1] 
+            const id = body.result
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+            const status3 = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceService/CreateInvoice",data.InvoiceServiceMULTIPLEPOSTDATA);
+            const body2 = status3[1]
+            const id2 = body2.result
+            expect(status3[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+            const status4 = await query.DeleteRequest(tokenValueADMIN,"services/app/InvoiceService/DeleteMultiple?ids="+ id + "&ids=" +id2);
+            expect(status4[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+        });
+    });       
 });

@@ -25,6 +25,24 @@ export class DepartmentFinancesAPI{
         return await this.Response(response);
     };
 
+    async PutRequest(token, putRequest, putData){
+        const response = await this.request.put(baseUrl+putRequest, 
+        {
+            headers: {'Authorization': `Bearer ${token}`},
+            data: putData
+        });
+        return await this.Response(response);
+    };
+
+     async DeleteRequest(token, deleteRequest){
+        const response = await this.request.delete(baseUrl+deleteRequest, 
+        {
+            headers: {'Authorization': `Bearer ${token}`}
+        }
+        );
+        return await this.Response(response);
+    };
+
     async PostAuthRequest(PostData){
         const response = await this.request.post(baseUrl+"TokenAuth/Authenticate", 
         {
