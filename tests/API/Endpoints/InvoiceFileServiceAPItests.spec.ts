@@ -5,7 +5,7 @@ import fs from 'fs'
 
 let tokenValueADMIN
 const data = JSON.parse(fs.readFileSync('data/API/APIdata.json', 'utf-8'));
-const fileContent = fs.readFileSync('data/apple.png');
+
 
 test.describe('Authorized', () => {
     test.beforeEach("Token Auth", async ({ request }) => {
@@ -60,23 +60,5 @@ test.describe('Authorized', () => {
                     expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
             })
         }
-    });  
-
-    // test.describe('POST', () => {
-    //     test("Create", async({request}) => {  
-    //         const query = new DepartmentFinancesAPI(request);
-    //         const status = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceFileService/AddFileBytesFormFile",{
-    //             InvoiceId:"28",
-    //             multipart: {
-    //                 Content: {
-    //                 name: 'apple.png',
-    //                 mimeType: 'text/plain',
-    //                 buffer: fileContent,
-    //               },}
-    //           });
-    //         const body = status[1] 
-    //         expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-    //         console.log(body);
-    //     });
-    // });      
+    });     
 });
