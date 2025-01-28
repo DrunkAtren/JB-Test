@@ -156,7 +156,30 @@ test.describe('Authorized', () => {
                 const query = new DepartmentFinancesAPI(request);
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Role/GetAll?Keyword=" + string + "&SkipCount="+ number + "&MaxResultCount=" + maxcount);
                     expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-            })
-        }}}
-    });     
+        })};
+    }}});
+    test.describe('POST', () => {
+        test("Create with Template '"+data.RolePOSTDATA.description+"'", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/Role/Create",data.RolePOSTDATA);
+            const body = status[1] 
+            const id = body.result.id
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+            const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/Role/Delete?Id="+ id);
+            expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+        });
+    });   
+    test.describe('DELETE', () => {
+        test("Delete with Template '"+data.RolePOSTDATA.description+"'", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/Role/Create",data.RolePOSTDATA);
+            const body = status[1] 
+            const id = body.result.id
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+            const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/Role/Delete?Id="+ id);
+            expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+        });
+    });                
 });

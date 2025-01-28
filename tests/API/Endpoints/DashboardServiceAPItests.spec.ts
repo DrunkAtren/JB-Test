@@ -13,19 +13,24 @@ test.describe('Authorized', () => {
         tokenValueADMIN = accessToken        
     });
 
-    test.describe('GET', () => {
-        test('GetInYear = Empty',async({request}) =>{
-            const query = new DepartmentFinancesAPI(request);
-                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/DashboardService/GetInYear");
-                expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-        })
-
+    test.describe('Functional', () => {
+        test.describe('GET', () => {
         for (const years of data.DashboardServiceYEAR) {
             test('GetInYear = ' + years,async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/DashboardService/GetInYear?year="+ years);
                     expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
             })
-        }
-    });     
+        }}); 
+    });
+
+    test.describe('Validation', () => {
+        test.describe('GET', () => {
+            test('GetInYear = Empty',async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/DashboardService/GetInYear");
+                    expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            })
+        }); 
+    })    
 });

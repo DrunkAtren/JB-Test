@@ -148,7 +148,50 @@ test.describe('Authorized', () => {
                 const query = new DepartmentFinancesAPI(request);
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageNumber=" + number1 + "&pageSize="+ number2 + "&year=" + year);
                     expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-            })
-        }}}
-    }); 
+                })};
+            }}});
+    test.describe('POST', () => {
+        test("Create with name '"+data.SubAccountServicePOSTDATA.name+"'", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/Create",data.SubAccountServicePOSTDATA);
+            const body = status[1] 
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+        });
+
+        for (const id of data.SubAccountServicePOSTID) {
+            test("ValidateSubAccount with Id = '"+ id + "'", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/ValidateSubAccount?subAccountId="+id,"");
+                const body = status[1] 
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
+            });
+        };
+        test("ValidateSubAccount with Id = Empty", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/ValidateSubAccount?subAccountId=","");
+            const body = status[1] 
+            expect(status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+            console.log(body);
+        });
+
+        for (const id of data.SubAccountServicePOSTID) {
+            test("ChangeIsActive with Id = '"+ id + "'", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/ChangeIsActive?projectId="+id,"");
+                const body = status[1] 
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
+            });
+        };
+
+        test("ChangeIsActive with Id = Empty", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/ChangeIsActive?projectId=","");
+            const body = status[1] 
+            expect(status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+            console.log(body);
+        });
+    });   
 });

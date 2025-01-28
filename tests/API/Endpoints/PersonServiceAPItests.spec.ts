@@ -40,5 +40,22 @@ test.describe('Authorized', () => {
                 expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
         })
     });     
-    
+    test.describe('POST', () => {
+        test("Create with name '" + data.PersonServicePOSTDATA.name +"'", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/PersonService/Create",data.PersonServicePOSTDATA);
+            const body = status[1] 
+            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            console.log(body);
+        });
+        for (const number of data.PersonServiceID) {
+            for (const toggle of data.PersonServiceSWITCH) 
+            test("SetIsActive by Id = " + number + " and isActive = "+ toggle, async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/PersonService/SetIsActive?id=" + number + "&isActive="+ toggle,"");
+                const body = status[1] 
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
+        });
+    }}); 
 });

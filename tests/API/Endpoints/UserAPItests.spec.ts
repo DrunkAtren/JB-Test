@@ -140,7 +140,55 @@ test.describe('Authorized', () => {
                 const query = new DepartmentFinancesAPI(request);
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?IsActive=" + toggle + "&SkipCount="+ number2 + "&MaxResultCount=" + number);
                     expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-            })
-        }}}
+            })};
+        }}});
+        test.describe('POST', () => {
+            test("Create with name '"+data.UserPOSTDATA.name+"'", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/User/Create",data.UserPOSTDATA);
+                const body = status[1] 
+                const id = body.result.id
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
+                const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/User/Delete?Id="+ id);
+                expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            });
+
+            for (const language of data.UserlANGUAGEPOST) {
+                test("Change Language to'"+language+"'", async({request}) => {  
+                    const query = new DepartmentFinancesAPI(request);
+                    const status = await query.PostRequest(tokenValueADMIN,"services/app/User/ChangeLanguage",language);
+                    const body = status[1] 
+                    expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body);
+            })};
+
+            test("ChangePassword", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/User/ChangePassword",data.UserPASSWORDCHANGEDATA);
+                const body = status[1] 
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
+            });
+
+            test("ResetPassword", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/User/ResetPassword",data.UserPASSWORDRESETDATA);
+                const body = status[1] 
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
+            });
+        });   
+        test.describe('DELETE', () => {
+            test("Delete with name '"+data.UserPOSTDATA.name+"'", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/User/Create",data.UserPOSTDATA);
+                const body = status[1] 
+                const id = body.result.id
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
+                const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/User/Delete?Id="+ id);
+                expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED); 
+        });
     });     
 });
