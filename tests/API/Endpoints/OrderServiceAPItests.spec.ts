@@ -276,6 +276,114 @@ test.describe('Authorized', () => {
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetOrdersBudget?projectId=&year=");
                     expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             })
+
+            for (const id of data.ValidationNUMBERDATA) {
+                test('GetAllOrdersWithInvoicesIdYear by ID = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetAllOrdersWithInvoicesIdYear?year="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number of data.ValidationNUMBERDATA) {
+                test('GetAllOrdersWithInvoicesAndFilesPaginationYear by pageNumber = ' + number,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetAllOrdersWithInvoicesAndFilesPaginationYear?pageNumber="+ number);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number of data.ValidationNUMBERDATA) {
+                test('GetAllOrdersWithInvoicesAndFilesPaginationYear by pageSize = ' + number,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetAllOrdersWithInvoicesAndFilesPaginationYear?pageSize="+ number);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const year of data.ValidationNUMBERDATA) {
+                test('GetAllOrdersWithInvoicesAndFilesPaginationYear by year = ' + year,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetAllOrdersWithInvoicesAndFilesPaginationYear?year="+ year);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number of data.ValidationNUMBERDATA) {
+                for (const number2 of data.ValidationNUMBERDATA) 
+                test('GetAllOrdersWithInvoicesAndFilesPaginationYear by pageNumber = = ' + number + " and pageSize = " + number2,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetAllOrdersWithInvoicesAndFilesPaginationYear?pageNumber=" + number + "&pageSize="+ number2);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number of data.ValidationNUMBERDATA) {
+                for (const number2 of data.ValidationNUMBERDATA) {
+                    for (const year of data.ValidationNUMBERDATA){
+                test('GetAllOrdersWithInvoicesAndFilesPaginationYear by pageNumber = ' + number + " and  pageSize = " + number2 + " and Year = " + year,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetAllOrdersWithInvoicesAndFilesPaginationYear?pageNumber=" + number + "&pageSize="+ number2 + "&year=" + year);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }}}
+
+            for (const id of data.ValidationIDDATA) {
+                test('GetOneMain by ID = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetOneMain?id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const id of data.ValidationIDDATA) {
+                test('GetDetails by ID = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetDetails?id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const wirka of data.ValidationNUMBERDATA) {
+                test('GetAllOrdersByWirka by Wirka = ' + wirka,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetAllOrdersByWirka?wirka="+ wirka);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const year of data.ValidationNUMBERDATA) {
+                test('GetAllInYear by year = ' + year,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetAllInYear?year="+ year);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const id of data.ValidationIDDATA) {
+                test('GetOrdersBudget by projectId = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetOrdersBudget?projectId="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const year of data.ValidationNUMBERDATA) {
+                test('GetOrdersBudget by by year = ' + year,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetOrdersBudget?year="+ year);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+    
+            for (const id of data.ValidationIDDATA) {
+                for (const year of data.ValidationNUMBERDATA) 
+                test('GetOrdersBudget by projectId = ' + id + " and year = " + year,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/OrderService/GetOrdersBudget?projectId=" + id + "&year="+ year);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
         })
     })
 });

@@ -188,6 +188,73 @@ test.describe('Authorized', () => {
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Role/GetAll?Keyword=&SkipCount=&MaxResultCount=");
                     expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             })
+
+            for (const permission of data.ValidationSTRINGDATA) {
+                test('GetRoles by Permission = ' + permission,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Role/GetRoles?Permission="+ permission);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const id of data.ValidationIDDATA) {
+                test('GetRoleForEdit by Id = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Role/GetRoleForEdit?Id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const id of data.ValidationIDDATA) {
+                test('Get by Id = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Role/Get?Id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const string of data.ValidationSTRINGDATA) {
+                test('GetAll by Keyword = ' + string,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Role/GetAll?Keyword="+ string);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number of data.ValidationNUMBERDATA) {
+                test('GetAll by SkipCount = ' + number,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Role/GetAll?SkipCount="+ number);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const maxcount of data.ValidationNUMBERDATA) {
+                test('GetAll by MaxResultCount = ' + maxcount,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Role/GetAll?MaxResultCount="+ maxcount);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const string of data.ValidationSTRINGDATA) {
+                for (const number of data.ValidationNUMBERDATA) 
+                test('GetAll by Keyword = ' + string + " and SkipCount = " + number,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Role/GetAll?Keyword=" + string + "&SkipCount="+ number);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const string of data.ValidationSTRINGDATA) {
+                for (const number of data.ValidationNUMBERDATA) {
+                    for (const maxcount of data.ValidationNUMBERDATA){
+                test('GetAll by Keyword = ' + string + " and SkipCount = " + number + " and MaxResultCount = " + maxcount,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Role/GetAll?Keyword=" + string + "&SkipCount="+ number + "&MaxResultCount=" + maxcount);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })};
+            }}
         })
     })             
 });

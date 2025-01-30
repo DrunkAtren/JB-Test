@@ -142,6 +142,55 @@ test.describe('Authorized', () => {
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/EstimatedExpenseService/GetLatestEstimatedExpensesForSubAccount?subAccountId=");
                     expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             });
+
+            for (const id of data.ValidationIDDATA) {
+                test('Get by ID = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/EstimatedExpenseService/Get?id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                test('GetEstimatedExpenseHistory by subAccountId = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/EstimatedExpenseService/GetEstimatedExpenseHistory?subAccountId="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationSTRINGDATA) {
+                test('GetEstimatedExpenseHistory by group = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/EstimatedExpenseService/GetEstimatedExpenseHistory?group="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                for (const id2 of data.ValidationSTRINGDATA) 
+                test('GetEstimatedExpenseHistory by subAccountId = ' + id + " and group = " + id2,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/EstimatedExpenseService/GetEstimatedExpenseHistory?subAccountId=" + id + "&group="+ id2);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                test('GetGroupsForSubAccount by subAccountId = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/EstimatedExpenseService/GetGroupsForSubAccount?subAccountId="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                test('GetLatestEstimatedExpensesForSubAccount by subAccountId = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/EstimatedExpenseService/GetLatestEstimatedExpensesForSubAccount?subAccountId="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
         });
     });
 });

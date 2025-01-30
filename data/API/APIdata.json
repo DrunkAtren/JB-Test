@@ -1,0 +1,207 @@
+{
+    "AuthAdmin":
+    {   
+                "userNameOrEmailAddress": "admin",
+                "password": "123qwe",
+                "tenacyName": "WEiI",
+                "rememberClient": true
+    },
+
+    "GET_STATUS_POSITIVE_EXPECTED": 200,
+    "GET_STATUS_NEGATIVE_EXPECTED": 404,
+    "GET_STATUS_BAD_REQUEST_EXPECTED": 400,
+
+    "ActivityTypeServiceID": ["1","2","3","4","5","6","7","8","9","10"],
+
+    "AccountPOSTDATA": ["WEiI","admin"],
+    "AccountPOSTREGISTERDATA":
+      {
+        "name": "Jakub",
+        "surname": "Banaś",
+        "userName": "Atren2",
+        "emailAddress": "jakub2@mail.com",
+        "password":"123",
+        "captchaResponse":"true"
+      },
+
+    "ActivityTypeServicePOSTDATA":
+      {
+        "identifier": 0,
+        "name": "CreateTest1",
+        "id": 0
+      },
+    "ActivityTypeServiceDELETEPOSTDATA":
+      {
+        "identifier": 0,
+        "name": "DeleteTest1",
+        "id": 0
+      },
+
+    "ConfigurationPOSTDATA":[
+      {
+        "theme": "Dark"
+      },
+      {
+        "theme": "Light"
+      }],
+
+    "CostTypeServiceYEAR": ["2019","2020","2021","2022","2023","2024"],
+    "CostTypeServiceID": ["1","2","3","4","5","6","7","8","9","10"],
+    "CostTypeServiceCOSTTYPEID": ["1","2","3","4","5","6","7","8","9","10"],
+    "CostTypesWithParentYEAR": ["2019","2020","2021","2022","2023","2024"],
+    "CostTypeServicePOSTDATA": [
+      {
+        "parentId": 1,
+        "identifier": 0,
+        "name": "Test1",
+        "insertDate": 2019
+      },
+      {
+        "parentId": 1,
+        "identifier": 0,
+        "name": "Test2",
+        "insertDate": 2024
+      }],
+    "CostTypeServiceDELETEPOSTDATA": {
+      "parentId": 1,
+      "identifier": 0,
+      "name": "Delete1",
+      "insertDate": 2019
+    },
+
+    "DashboardServiceYEAR": ["2019","2020","2021","2022","2023","2024"],
+
+    "DonationServiceID": ["1","10"],
+    "DonationServiceYEAR": ["2019","2020","2021","2022","2023","2024"],
+    "DonationServicePOSTDATA":
+    {
+      "subAccountId": 15,
+      "amount": 1,
+      "description": "Test1"
+    },
+
+    "EstimatedExpenseServiceID":["1","15"],
+    "EstimatedExpenseServiceGROUP":["1","15"],
+    "EstimatedExpenseServiceSUBACCOUNTID":["1","15"],
+    "EstimatedExpenseServicePOSTDATA":
+    {
+      "group": 0,
+      "amount": 1000,
+      "subAccountId": 15,
+      "costTypeId": 1,
+      "id": 0
+    },
+
+    "FinancesValidatorID": "15",
+
+    "InvoiceFileServiceID":["1","15"],
+
+    "InvoiceServiceID":["1","15"],
+    "InvoiceServiceGetOneID":["1","15"],
+    "InvoiceServiceORDERID":["1","10"],
+    "InvoiceServicePOSTDATA":
+    {
+      "amount": 10000,
+      "description": "Test1",
+      "invoiceDate": "2025-01-26T03:16:53.942Z",
+      "orderId": 20,
+      "subAccountId": 15,
+      "costTypeId": 1
+    },
+    "InvoiceServiceMULTIPLEPOSTDATA":
+    {
+      "amount": 10000,
+      "description": "Test1",
+      "invoiceDate": "2025-01-26T03:16:53.942Z",
+      "orderId": 20,
+      "subAccountId": 15,
+      "costTypeId": 1
+    },
+
+    "OrderServiceYEAR":["2019","2020","2021","2022"],
+    "OrderServiceID":["1","15"],
+    "OrderServiceWIRKA":["1","10","100","4","40"],
+    "OrderServicePAGENUMBER":["1","2"],
+    "OrderServicePAGESIZE":["1","2"],
+    "OrderServicePROJECTID":["1","2"],
+    "OrderServicePOSTDATA":
+    {
+      "wirka": 10,
+      "amount": 10,
+      "insertDate": "2025-01-26T03:52:54.264Z",
+      "description": "Test1",
+      "subAccountId": 15,
+      "costTypeId": 1
+    },
+
+    "PersonServiceID": ["1","10"],
+    "PersonServicePOSTDATA":{
+      "name": "Test",
+      "lastName": "Test",
+      "personIdentificator": 0
+    },
+    "PersonServiceSWITCH": ["true","false"],
+
+    "RolePERMISSION": ["admin"],
+    "RoleID": ["1","10"],
+    "RoleKEYWORD": ["admin"],
+    "RoleSKIPCOUNT": ["0","1"],
+    "RoleMAXRESULTCOUNT": ["1","2"],
+    "RolePOSTDATA":{
+      "name": "Test",
+      "displayName": "Test",
+      "normalizedName": "Test",
+      "description": "Test",
+      "grantedPermissions": [
+        "string"
+      ]
+    },
+
+    "SubAccountServiceID": ["1","10"],
+    "SubAccountServiceYEAR":["2019","2020","2021","2022"],
+    "SubAccountServicePAGENUMBER":["1","2"],
+    "SubAccountServicePAGESIZE":["1","2"],
+    "SubAccountServicePOSTDATA":{
+      "identifier": "Test",
+      "name": "Test",
+      "personId": 15,
+      "activityTypeId": 1,
+      "activityTypeIdentifier": 1
+    },
+    "SubAccountServicePOSTID": ["15","36"],
+
+    "TenantID": ["1","2","3"],
+    "TenantGetAll": ["1","2","3"],
+
+    "UserID": ["1"],
+    "UserGetAll": ["1","2","3"],
+    "UserSWITCH": ["true","false"],
+    "UserNUMBER":["1","10"],
+    "UserKEYWORD":["admin"],
+    "UserPOSTDATA":{
+      "userName": "Test1",
+      "name": "Test1",
+      "surname": "Test1",
+      "emailAddress": "Test1@example.com",
+      "isActive": true,
+      "roleNames": [
+        "admin"
+      ],
+      "password": "string"
+    },
+    "UserlANGUAGEPOST": ["en","pl"],
+    "UserPASSWORDCHANGEDATA":{
+      "currentPassword": "123qwe",
+      "newPassword": "123qwe"
+    },
+    "UserPASSWORDRESETDATA":{
+      "adminPassword": "admin",
+      "userId": 16,
+      "newPassword": "test1"
+    },
+
+  "ValidationIDDATA":["-1","0","string"],
+  "ValidationSTRINGDATA":["LONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORD","~~~''%$#@(((OR=1)))sss"],
+  "ValidationEMAILDATA":["notmail","-@$!%@!alsonotmail","notmail.pl.pl"],
+  "ValidationNUMBERDATA":["string","125-21521)(%","111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"]
+}

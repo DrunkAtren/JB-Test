@@ -65,6 +65,22 @@ test.describe('Authorized', () => {
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceFileService/Get?Id=");
                     expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             });
+
+            for (const id of data.ValidationIDDATA) {
+                test('GetFile by id = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceFileService/GetFile?Id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                test('Get by id = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceFileService/Get?Id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
         });
     });  
 });

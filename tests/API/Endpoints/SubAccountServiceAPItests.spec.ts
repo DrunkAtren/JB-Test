@@ -107,9 +107,9 @@ test.describe('Authorized', () => {
                     const query = new DepartmentFinancesAPI(request);
                         const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageNumber=" + number1 + "&pageSize="+ number2 + "&year=" + year);
                         expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-                    })};
-                }}  
-            });
+                })};
+            }}  
+        });
 
             test.describe('POST', () => {
                 test("Create with name '"+data.SubAccountServicePOSTDATA.name+"'", async({request}) => {  
@@ -186,6 +186,65 @@ test.describe('Authorized', () => {
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageNumber=&pageSize=&year=");
                     expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             })
+
+            for (const id of data.ValidationIDDATA) {
+                test('Get by Id = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/Get?id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const year of data.ValidationNUMBERDATA) {
+                test('GetAllIn by year = ' + year,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllIn?year="+ year);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number of data.ValidationNUMBERDATA) {
+                test('GetAllInPaginated by pageNumber = ' + number,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageNumber=1"+ number);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number of data.ValidationNUMBERDATA) {
+            test('GetAllInPaginated by pageSize = ' + number,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageSize="+ number);
+                    expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+            })
+            }
+
+            for (const year of data.ValidationNUMBERDATA) {
+                test('GetAllInPaginated by Year = ' + year,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?year="+ year);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }    
+
+            for (const number1 of data.ValidationNUMBERDATA) {
+                for (const number2 of data.ValidationNUMBERDATA) 
+                test('GetAllInPaginated by pageNumber = ' + number1 + " and pageSize = " + number2,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageNumber=" + number1 + "&pageSize="+ number2);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number1 of data.ValidationNUMBERDATA) {
+                for (const number2 of data.ValidationNUMBERDATA) {
+                    for (const year of data.ValidationNUMBERDATA){
+                test('GetAllInPaginated by pageNumber = ' + number1 + " and pageSize = " + number2 + " and year = " + year,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageNumber=" + number1 + "&pageSize="+ number2 + "&year=" + year);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })};
+            }}  
         })
 
         test.describe('POST', () => {  

@@ -34,8 +34,8 @@ test.describe('Authorized', () => {
                     const query = new DepartmentFinancesAPI(request);
                         const get_status = await query.GetRequest(tokenValueADMIN,"services/app/DonationService/GetAllIn?year="+ years);
                         expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-                })
-            }});
+            })}
+        });
 
             test.describe('POST', () => {
                 //Subaccountid statyczne 15, jak bedzie wywalac błąd to przez brak takiego subaccount prawdopodobnie
@@ -52,15 +52,30 @@ test.describe('Authorized', () => {
         test.describe('GET', () => {
             test('Get by ID = Empty',async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
-                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/DonationService/Get");
-                    expect(get_status[0]).toBe(data.GET_STATUS_NEGATIVE_EXPECTED);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/DonationService/Get?id=");
+                    expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             });  
             
             test('GetAllIn = Empty',async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
-                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/DashboardService/GetInYear");
-                    expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/DashboardService/GetInYear?year=");
+                    expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             });
+
+            for (const id of data.ValidationIDDATA) {
+                test('Get by ID = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/DonationService/Get?id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const years of data.ValidationNUMBERDATA) {
+                test('GetAllIn = ' + years,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/DonationService/GetAllIn?year="+ years);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+            })}
         }); 
     });
 });

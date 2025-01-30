@@ -180,6 +180,46 @@ test.describe('Authorized', () => {
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllObjectsToDelete?ids=");
                     expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             });
+
+            for (const id of data.ValidationIDDATA) {
+                test("GetAllWithOutOrderBySubAccountId by subAccountId = " + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllWithOutOrderBySubAccountId?subAccountId="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                test("GetOne by Id = " + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetOne?id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                test("GetOrderInvoices by orderId = " + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetOrderInvoices?orderId="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                test("GetAllMain by orderId = " + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllMain?orderId="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                test("GetAllObjectsToDelete by Id = " + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllObjectsToDelete?ids="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
         });
     });     
 });

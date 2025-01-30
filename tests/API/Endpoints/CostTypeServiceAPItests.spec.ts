@@ -63,7 +63,8 @@ test.describe('Authorized', () => {
                         const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/GetCostTypesWithParentYear?year=" + years);
                         expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
                 })
-            }});
+            }
+        });
 
             test.describe('POST', () => {
                 for (const template of data.CostTypeServicePOSTDATA) {
@@ -77,7 +78,8 @@ test.describe('Authorized', () => {
                     const status2 = await query.DeleteRequest(tokenValueADMIN,  "services/app/CostTypeService/DeleteOne?id="+ id);
                     expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
                 });
-            }});  
+            }
+        });  
 
             test.describe('DELETE', () => {
                 test('Create with template "' + data.CostTypeServiceDELETEPOSTDATA.name + "'", async({request}) => {  
@@ -97,27 +99,59 @@ test.describe('Authorized', () => {
         test.describe('GET', () => {
             test('GetAllyear = Empty',async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
-                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/GetAllyear");
-                    expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/GetAllyear?year=");
+                    expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             });
 
             test('Get by ID = Empty',async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
-                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/Get");
-                    expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/Get?id=");
+                    expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             });
 
             test('GetPostCostType by ID = Empty',async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
-                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/GetPostCostType");
-                    expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/GetPostCostType?id=");
+                    expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             });
 
             test('GetCostTypesWithParentYear = Empty',async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
-                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/GetCostTypesWithParentYear");
-                    expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/GetCostTypesWithParentYear?year=");
+                    expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             });
+
+            for (const years of data.ValidationNUMBERDATA) {
+                test('GetAllyear = ' + years,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/GetAllyear?year="+years);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                test('Get by ID = '+id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/Get?id="+id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const id of data.ValidationIDDATA) {
+                test('GetPostCostType by ID = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/GetPostCostType?id=" + id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            };
+
+            for (const years of data.ValidationNUMBERDATA) {
+                test('GetCostTypesWithParentYear = ' + years,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/CostTypeService/GetCostTypesWithParentYear?year=" + years);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
         });          
     });
 });

@@ -189,7 +189,7 @@ test('Test funkcjonalności Dodawania | Usuwania Pracowników', async ({ page })
   await page.getByRole('link', { name: '2' }).click();
   await expect(page.getByRole('cell', { name: 'Test' })).toBeVisible();
   await expect(page.getByRole('cell', { name: 'Pracownika' })).toBeVisible();
-  await page.getByRole('row', { name: 'Test Pracownika ' }).locator('i').nth(1).click();
+  await page.getByRole('row', { name: 'Test Pracownika ' }).locator('i').last().click();
   await page.getByRole('button', { name: 'Tak' }).click();
 });
 

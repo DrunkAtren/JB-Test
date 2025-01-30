@@ -3,6 +3,4 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-data/API
-data/PAGE
 allure-results

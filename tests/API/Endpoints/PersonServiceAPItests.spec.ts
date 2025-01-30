@@ -62,9 +62,17 @@ test.describe('Authorized', () => {
         test.describe('GET', () => {
             test('Get by ID = Empty',async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
-                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/Get");
-                    expect(get_status[0]).toBe(data.GET_STATUS_NEGATIVE_EXPECTED);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/Get?id=");
+                    expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             })
+
+            for (const id of data.ValidationIDDATA) {
+                test('Get by ID = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/Get?Id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
         })
     })
 });

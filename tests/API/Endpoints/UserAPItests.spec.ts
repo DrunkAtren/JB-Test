@@ -198,6 +198,93 @@ test.describe('Authorized', () => {
                     const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?MaxResultCount=");
                     expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             })
+
+            for (const id of data.ValidationIDDATA) {
+                test('Get by ID = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/Get?Id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const string of data.ValidationSTRINGDATA) {
+                test('GetAll Keyword = ' + string,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?Keyword="+ string);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const toggle of data.ValidationSTRINGDATA) {
+                test('GetAll IsActive = ' + toggle,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?IsActive="+ toggle);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number of data.ValidationNUMBERDATA) {
+                test('GetAll SkipCount = ' + number,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?SkipCount="+ number);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number of data.ValidationNUMBERDATA) {
+                test('GetAll MaxResultCount = ' + number,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?MaxResultCount="+ number);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const string of data.ValidationSTRINGDATA) {
+                for (const toggle of data.ValidationSTRINGDATA) 
+                test('GetAll by Keyword = ' + string + " and IsActive = " + toggle,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?Keyword=" + string + "&IsActive="+ toggle);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const number of data.ValidationNUMBERDATA) {
+                for (const toggle of data.ValidationSTRINGDATA) 
+                test('GetAll by IsActive = ' + toggle + " and SkipCount = " + number,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?IsActive=" + toggle + "&SkipCount="+ number);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            } 
+            
+            for (const number of data.ValidationNUMBERDATA)
+                for (const number2 of data.ValidationNUMBERDATA) {
+                test('GetAll by SkipCount = ' + number2 + " and MaxResultCount = " + number,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?SkipCount=" + number2 + "&MaxResultCount="+ number);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }
+
+            for (const string of data.ValidationSTRINGDATA) {
+                for (const toggle of data.ValidationSTRINGDATA) {
+                    for (const number2 of data.ValidationNUMBERDATA){
+                test('GetAll by Keyword = ' + string + " and IsActive = " + toggle + " and SkipCount = " + number2,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?Keyword=" + string + "&IsActive="+ toggle + "&SkipCount=" + number2);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })
+            }}}
+
+            for (const toggle of data.ValidationSTRINGDATA) {
+                for (const number2 of data.ValidationNUMBERDATA) {
+                    for (const number of data.ValidationNUMBERDATA){
+                test('GetAll by IsActive = ' + toggle + " and SkipCount = " + number2 + " and MaxResultCount = " + number,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/User/GetAll?IsActive=" + toggle + "&SkipCount="+ number2 + "&MaxResultCount=" + number);
+                        expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
+                })};
+            }}
         })
     })  
 });

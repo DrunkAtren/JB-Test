@@ -114,8 +114,8 @@ test.describe('Authorized', () => {
         test.describe('GET', () => {
             test('Get by ID = Empty',async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
-                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/Get");
-                    expect(get_status[0]).toBe(data.GET_STATUS_NEGATIVE_EXPECTED);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/Get?Id=");
+                    expect(get_status[0]).toBe(data.GET_STATUS_BAD_REQUEST_EXPECTED);
             })
 
             test('GetAll Keyword = Empty',async({request}) =>{
