@@ -71,8 +71,6 @@ test('Test funkcjonalności Paska Bocznego w zakładce "Raporty"', async ({ page
   await expect(page.getByRole('link', { name: 'Raport według rodzaju kosztu' })).toBeVisible();
   await page.getByRole('link', { name: ' Niezrealizowane zamówienia' }).click();
   await expect(page.getByRole('link', { name: ' Niezrealizowane zamówienia' })).toBeVisible();
-  
-  await page.waitForTimeout(5000);
 });
 
 test('Test funkcjonalności Paska Bocznego w zakładce "Ustawienia"', async ({ page }) => {
@@ -96,13 +94,11 @@ test('Test funkcjonalności Paska Bocznego w zakładce "Ustawienia"', async ({ p
   await page.getByRole('link', { name: ' Ustawienia' }).click();
   await page.getByRole('link', { name: ' Pracownicy' }).click();
   await expect(page.getByRole('heading', { name: 'Pracownicy' })).toBeVisible();
-  // await page.getByRole('link', { name: ' Ustawienia' }).click();
   await page.getByRole('link', { name: ' Rodzaje działalności' }).click();
   await expect(page.getByRole('heading', { name: 'Rodzaje działalności' })).toBeVisible();
   await page.getByRole('link', { name: ' Autorzy' }).click();
   await expect(page.getByRole('heading', { name: 'Rafał Wojszczyk' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Adrian Kuczyński' })).toBeVisible();
-  await page.waitForTimeout(5000);
 });
 
 test('Test funkcjonalności Dodawania Projektu', async ({ page }) => {
