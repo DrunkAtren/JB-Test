@@ -13,11 +13,13 @@ test.describe('Authorized', () => {
         tokenValueADMIN = accessToken        
     });
 
-    test.describe('GET', () => {
-        test('GetExternalAuthenticationProviders',async({request}) =>{
-            const query = new DepartmentFinancesAPI(request);
-                const get_status = await query.GetRequest(tokenValueADMIN,"TokenAuth/GetExternalAuthenticationProviders");
-                expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-        })
-    });     
+    test.describe('Functional', () => {
+        test.describe('GET', () => {
+            test('GetExternalAuthenticationProviders',async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"TokenAuth/GetExternalAuthenticationProviders");
+                    expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            })
+        });  
+    })
 });

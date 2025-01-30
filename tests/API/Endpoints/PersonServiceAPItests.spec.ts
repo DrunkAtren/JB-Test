@@ -13,49 +13,58 @@ test.describe('Authorized', () => {
         tokenValueADMIN = accessToken        
     });
 
-    test.describe('GET', () => {
-        test('Get by ID = Empty',async({request}) =>{
-            const query = new DepartmentFinancesAPI(request);
-                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/Get");
-                expect(get_status[0]).toBe(data.GET_STATUS_NEGATIVE_EXPECTED);
-        })
+    test.describe('Functional', () => {
+        test.describe('GET', () => {
+            for (const id of data.PersonServiceID) {
+                test('Get by ID = ' + id,async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);
+                        const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/Get?Id="+ id);
+                        expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                })
+            }
 
-        for (const id of data.PersonServiceID) {
-            test('Get by ID = ' + id,async({request}) =>{
+            test('GetAll',async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
-                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/Get?Id="+ id);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/GetAll");
                     expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
             })
-        }
 
-        test('GetAll',async({request}) =>{
-            const query = new DepartmentFinancesAPI(request);
-                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/GetAll");
-                expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-        })
-
-        test('GetAllActive',async({request}) =>{
-            const query = new DepartmentFinancesAPI(request);
-                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/GetAllActive");
-                expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-        })
-    });     
-    test.describe('POST', () => {
-        test("Create with name '" + data.PersonServicePOSTDATA.name +"'", async({request}) => {  
-            const query = new DepartmentFinancesAPI(request);
-            const status = await query.PostRequest(tokenValueADMIN,"services/app/PersonService/Create",data.PersonServicePOSTDATA);
-            const body = status[1] 
-            expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-            console.log(body);
-        });
-        for (const number of data.PersonServiceID) {
-            for (const toggle of data.PersonServiceSWITCH) 
-            test("SetIsActive by Id = " + number + " and isActive = "+ toggle, async({request}) => {  
+            test('GetAllActive',async({request}) =>{
                 const query = new DepartmentFinancesAPI(request);
-                const status = await query.PostRequest(tokenValueADMIN,"services/app/PersonService/SetIsActive?id=" + number + "&isActive="+ toggle,"");
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/GetAllActive");
+                    expect(get_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            })
+        })
+
+        test.describe('POST', () => {
+            test("Create with name '" + data.PersonServicePOSTDATA.name +"'", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/PersonService/Create",data.PersonServicePOSTDATA);
                 const body = status[1] 
                 expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
                 console.log(body);
-        });
-    }}); 
+            });
+
+            for (const number of data.PersonServiceID) {
+                for (const toggle of data.PersonServiceSWITCH) 
+                test("SetIsActive by Id = " + number + " and isActive = "+ toggle, async({request}) => {  
+                    const query = new DepartmentFinancesAPI(request);
+                    const status = await query.PostRequest(tokenValueADMIN,"services/app/PersonService/SetIsActive?id=" + number + "&isActive="+ toggle,"");
+                    const body = status[1] 
+                    expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body);
+                });
+            }
+        })
+    })
+
+    test.describe('Validation', () => {
+        test.describe('GET', () => {
+            test('Get by ID = Empty',async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/PersonService/Get");
+                    expect(get_status[0]).toBe(data.GET_STATUS_NEGATIVE_EXPECTED);
+            })
+        })
+    })
 });
