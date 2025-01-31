@@ -23,3 +23,13 @@ test.describe('Authorized', () => {
         });  
     })   
 });
+
+test.describe('Unauthorized', () => {
+    test.describe('GET', () => {
+        test('Get',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Session/GetCurrentLoginInformations");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        })
+    });  
+})  

@@ -10,6 +10,7 @@
     "GET_STATUS_POSITIVE_EXPECTED": 200,
     "GET_STATUS_NEGATIVE_EXPECTED": 404,
     "GET_STATUS_BAD_REQUEST_EXPECTED": 400,
+    "STATUS_NONAUTHORIZED": 401,
 
     "ActivityTypeServiceID": ["1","2","3","4","5","6","7","8","9","10"],
 
@@ -18,7 +19,7 @@
       {
         "name": "Jakub",
         "surname": "Banaś",
-        "userName": "Atren2",
+        "userName": "Atren22",
         "emailAddress": "jakub2@mail.com",
         "password":"123",
         "captchaResponse":"true"

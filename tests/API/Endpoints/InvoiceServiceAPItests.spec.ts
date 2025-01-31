@@ -223,3 +223,140 @@ test.describe('Authorized', () => {
         });
     });     
 });
+
+test.describe('Unauthorized', () => {
+    test.describe('GET', () => {
+        test('GetAll',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAll");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        test('GetAllWithOutOrder',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllWithOutOrder");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        test('GetAllWithOutOrderBySubAccountId',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllWithOutOrderBySubAccountId");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        for (const id of data.InvoiceServiceID) {
+            test("GetAllWithOutOrderBySubAccountId by subAccountId = " + id,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllWithOutOrderBySubAccountId?subAccountId="+ id);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        };
+
+        test('GetOne',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetOne");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        for (const id of data.InvoiceServiceGetOneID) {
+            test("GetOne by Id = " + id,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetOne?id="+ id);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        };
+
+        test('GetOrderInvoices',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetOrderInvoices");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        for (const id of data.InvoiceServiceORDERID) {
+            test("GetOrderInvoices by orderId = " + id,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetOrderInvoices?orderId="+ id);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        };
+
+        test('GetAllMain',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllMain");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        for (const id of data.InvoiceServiceORDERID) {
+            test("GetAllMain by orderId = " + id,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllMain?orderId="+ id);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        };
+
+        test('GetAllObjectsToDelete',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllObjectsToDelete");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        for (const id of data.InvoiceServiceID) {
+            test("GetAllObjectsToDelete by Id = " + id,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceService/GetAllObjectsToDelete?ids="+ id);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        };
+    });
+    test.describe('POST', () => {
+        test("CreateInvoice with template '"+data.InvoiceServicePOSTDATA.description+"'", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceService/CreateInvoice",data.InvoiceServicePOSTDATA);
+            const body = status[1] 
+            const id = body.result
+            expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            console.log(body);
+            const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/InvoiceService/DeleteOne?id="+ id);
+            expect(status2[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+        test("CreateMultiple", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceService/CreateInvoice",data.InvoiceServiceMULTIPLEPOSTDATA);
+            const body = status[1] 
+            const id = body.result
+            expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            console.log(body);
+            const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/InvoiceService/DeleteOne?id="+ id);
+            expect(status2[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+    });
+
+    test.describe('DELETE', () => {
+        test("DeleteOne", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceService/CreateInvoice",data.InvoiceServiceMULTIPLEPOSTDATA);
+            const body = status[1] 
+            const id = body.result
+            expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            console.log(body);
+            const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/InvoiceService/DeleteOne?id="+ id);
+            expect(status2[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        test("DeleteMultiple", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceService/CreateInvoice",data.InvoiceServiceMULTIPLEPOSTDATA);
+            const body = status[1] 
+            const id = body.result
+            expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            console.log(body);
+            const status3 = await query.PostRequest(tokenValueADMIN,"services/app/InvoiceService/CreateInvoice",data.InvoiceServiceMULTIPLEPOSTDATA);
+            const body2 = status3[1]
+            const id2 = body2.result
+            expect(status3[0]).toBe(data.STATUS_NONAUTHORIZED);
+            console.log(body);
+            const status4 = await query.DeleteRequest(tokenValueADMIN,"services/app/InvoiceService/DeleteMultiple?ids="+ id + "&ids=" +id2);
+            expect(status4[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+    });  
+});

@@ -289,3 +289,156 @@ test.describe('Authorized', () => {
         })
     })
 });
+
+test.describe('Unauthorized', () => {
+    test.describe('GET', () => {
+        test('Get',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/Get");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        })
+
+        for (const id of data.SubAccountServiceID) {
+            test('Get by Id = ' + id,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/Get?id="+ id);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        test('GetProjectsYears',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetProjectsYears");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        })
+
+        test('GetAll',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAll");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        })
+
+        test('GetAllIn',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllIn");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        })
+
+        for (const year of data.SubAccountServiceYEAR) {
+            test('GetAllIn by year = ' + year,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllIn?year="+ year);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        test('GetAllPostcard',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllPostcard");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        })
+
+        test('GetAllInPaginated',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        })
+
+        for (const number of data.SubAccountServicePAGENUMBER) {
+            test('GetAllInPaginated by pageNumber = ' + number,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageNumber=1"+ number);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        for (const number of data.SubAccountServicePAGESIZE) {
+        test('GetAllInPaginated by pageSize = ' + number,async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageSize="+ number);
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        })
+        }
+
+        for (const year of data.SubAccountServiceYEAR) {
+            test('GetAllInPaginated by Year = ' + year,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?year="+ year);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }    
+
+        for (const number1 of data.SubAccountServicePAGENUMBER) {
+            for (const number2 of data.SubAccountServicePAGESIZE) 
+            test('GetAllInPaginated by pageNumber = ' + number1 + " and pageSize = " + number2,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageNumber=" + number1 + "&pageSize="+ number2);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        for (const number1 of data.SubAccountServicePAGENUMBER) {
+            for (const number2 of data.SubAccountServicePAGESIZE) {
+                for (const year of data.SubAccountServiceYEAR){
+            test('GetAllInPaginated by pageNumber = ' + number1 + " and pageSize = " + number2 + " and year = " + year,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/SubAccountService/GetAllInPaginated?pageNumber=" + number1 + "&pageSize="+ number2 + "&year=" + year);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })};
+        }}  
+    });
+
+    test.describe('POST', () => {
+        test("Create with name '"+data.SubAccountServicePOSTDATA.name+"'", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/Create",data.SubAccountServicePOSTDATA);
+            const body = status[1] 
+            expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            console.log(body);
+        });
+
+        for (const id of data.SubAccountServicePOSTID) {
+            test("ValidateSubAccount with Id = '"+ id + "'", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/ValidateSubAccount?subAccountId="+id,"");
+                const body = status[1] 
+                expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+                console.log(body);
+            });
+        };
+
+        for (const id of data.SubAccountServicePOSTID) {
+            test("ChangeIsActive with Id = '"+ id + "'", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/ChangeIsActive?projectId="+id,"");
+                const body = status[1] 
+                expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+                console.log(body);
+            });
+        };
+    })
+
+    test.describe('PUT', () => {
+        test('Put with template 1', async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);   
+                const post_status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/Create",data.SubAccountServicePOSTDATA);
+                const body = post_status[1]
+                expect(post_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+                console.log(body);
+                const id = body.result
+                const put_status = await query.PutRequest(tokenValueADMIN, "services/app/SubAccountService/Update", 
+                {
+                    "identifier": "PutTest",
+                    "name": "PutTest",
+                    "isActive": true,
+                    "activityTypeId": 1,
+                    "activityTypeIdentifier": 1,
+                    "personId": 15,
+                    "id": id
+                },);
+                const body2 = put_status[1]
+                expect(put_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+                console.log(body2);
+        }); 
+    }); 
+})

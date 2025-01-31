@@ -25,3 +25,16 @@ test.describe('Authorized', () => {
         }});
     });
 });
+
+test.describe('Unauthorized', () => {
+    test.describe('POST', () => {
+        for (const theme of data.ConfigurationPOSTDATA) {
+        test('Create with "' + theme.theme + "'", async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/Configuration/ChangeUiTheme",theme );
+            const body = status[1] 
+            expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            console.log(body);
+        });
+    }});
+});

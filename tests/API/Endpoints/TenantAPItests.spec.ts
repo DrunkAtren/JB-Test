@@ -144,3 +144,100 @@ test.describe('Authorized', () => {
         })
     })    
 });
+
+test.describe('Unauthorized', () => {
+    test.describe('GET', () => {
+        for (const id of data.TenantID) {
+            test('Get by ID = ' + id,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/Get?Id="+ id);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        test('GetAll',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/GetAll");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        })
+
+        for (const string of data.UserKEYWORD) {
+            test('GetAll Keyword = ' + string,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/GetAll?Keyword="+ string);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        for (const toggle of data.UserSWITCH) {
+            test('GetAll IsActive = ' + toggle,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/GetAll?IsActive="+ toggle);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        for (const number of data.RoleSKIPCOUNT) {
+            test('GetAll SkipCount = ' + number,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/GetAll?SkipCount="+ number);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        for (const number of data.UserNUMBER) {
+            test('GetAll MaxResultCount = ' + number,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/GetAll?MaxResultCount="+ number);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        for (const string of data.UserKEYWORD) {
+            for (const toggle of data.UserSWITCH) 
+            test('GetAll by Keyword = ' + string + " and IsActive = " + toggle,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/GetAll=" + string + "&IsActive="+ toggle);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        for (const number of data.UserNUMBER) {
+            for (const toggle of data.UserSWITCH) 
+            test('GetAll by IsActive = ' + toggle + " and SkipCount = " + number,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/GetAll?IsActive=" + toggle + "&SkipCount="+ number);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        for (const number of data.UserNUMBER)
+            for (const number2 of data.RoleSKIPCOUNT) {
+            test('GetAll by SkipCount = ' + number2 + " and MaxResultCount = " + number,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/GetAll=" + number2 + "&MaxResultCount="+ number);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }
+
+        for (const string of data.UserKEYWORD) {
+            for (const toggle of data.UserSWITCH) {
+                for (const number2 of data.RoleSKIPCOUNT){
+            test('GetAll by Keyword = ' + string + " and IsActive = " + toggle + " and SkipCount = " + number2,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/GetAll=" + string + "&IsActive="+ toggle + "&SkipCount=" + number2);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }}}
+
+        for (const toggle of data.UserSWITCH) {
+            for (const number2 of data.RoleSKIPCOUNT) {
+                for (const number of data.UserNUMBER){
+            test('GetAll by IsActive = ' + toggle + " and SkipCount = " + number2 + " and MaxResultCount = " + number,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/Tenant/GetAll?IsActive=" + toggle + "&SkipCount="+ number2 + "&MaxResultCount=" + number);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        }}}
+    })
+})

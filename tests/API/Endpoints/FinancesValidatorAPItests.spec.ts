@@ -26,3 +26,16 @@ test.describe('Authorized', () => {
         });   
     });
 });
+
+test.describe('Unauthorized', () => {
+    test.describe('POST', () => {
+        //Project id statyczne 15
+        test("RecalculateStatusForProject with ID = " + data.FinancesValidatorID, async({request}) => {  
+            const query = new DepartmentFinancesAPI(request);
+            const status = await query.PostRequest(tokenValueADMIN,"services/app/FinancesValidator/RecalculateStatusForProject?projectId="+data.FinancesValidatorID,"");
+            const body = status[1] 
+            expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            console.log(body);
+        });
+    });   
+});

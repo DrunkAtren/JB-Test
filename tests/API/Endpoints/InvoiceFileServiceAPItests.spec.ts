@@ -84,3 +84,41 @@ test.describe('Authorized', () => {
         });
     });  
 });
+
+test.describe('Unauthorized', () => {
+    test.describe('GET', () => {
+        test('GetFile',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceFileService/GetFile");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        for (const id of data.InvoiceFileServiceID) {
+            test('GetFile by id = ' + id,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceFileService/GetFile?Id="+ id);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        };
+
+        test('GetAll',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceFileService/GetAll");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        test('Get',async({request}) =>{
+            const query = new DepartmentFinancesAPI(request);
+                const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceFileService/Get");
+                expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+        });
+
+        for (const id of data.InvoiceFileServiceID) {
+            test('Get by id = ' + id,async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);
+                    const get_status = await query.GetRequest(tokenValueADMIN,"services/app/InvoiceFileService/Get?Id="+ id);
+                    expect(get_status[0]).toBe(data.STATUS_NONAUTHORIZED);
+            })
+        };
+    });
+});

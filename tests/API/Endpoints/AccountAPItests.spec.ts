@@ -56,3 +56,24 @@ test.describe('Authorized', () => {
         });
     });
 });
+
+test.describe('Unauthorized', () => {
+    test.describe('POST', () => {
+        for (const dataAccount of data.AccountPOSTDATA){
+            test('IsTenantAvailable by tenancyName = '+ dataAccount, async({request}) => {  
+                console.log(dataAccount)
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN, "services/app/Account/IsTenantAvailable", {"tenancyName": dataAccount});
+                const body = status[1] 
+                expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+                console.log(body);
+            })};
+            test('Register', async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/Account/Register", data.AccountPOSTREGISTERDATA);
+                const body = status[1] 
+                expect(status[0]).toBe(data.STATUS_NONAUTHORIZED);
+                console.log(body);
+        });
+    })
+});
