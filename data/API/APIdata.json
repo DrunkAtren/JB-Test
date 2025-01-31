@@ -68,6 +68,14 @@
       "name": "Delete1",
       "insertDate": 2019
     },
+    "CostTypeServicePUTPOSTDATA":
+      {
+        "parentId": 1,
+        "identifier": 0,
+        "name": "Test",
+        "insertDate": 2019
+      },
+    "CostTypeServiceSWITCH":["true","false"],
 
     "DashboardServiceYEAR": ["2019","2020","2021","2022","2023","2024"],
 
@@ -79,6 +87,13 @@
       "amount": 1,
       "description": "Test1"
     },
+    "DonationServicePUTDATA":
+    {
+      "subAccountId": 0,
+      "amount": 0,
+      "description": "PutTEST",
+      "id": 0
+    },
 
     "EstimatedExpenseServiceID":["1","15"],
     "EstimatedExpenseServiceGROUP":["1","15"],
@@ -87,6 +102,14 @@
     {
       "group": 0,
       "amount": 1000,
+      "subAccountId": 15,
+      "costTypeId": 1,
+      "id": 0
+    },
+    "EstimatedExpenseServicePUTPOSTDATA":
+    {
+      "group": 101,
+      "amount": 20000,
       "subAccountId": 15,
       "costTypeId": 1,
       "id": 0

@@ -111,38 +111,61 @@ test.describe('Authorized', () => {
             }}  
         });
 
-            test.describe('POST', () => {
-                test("Create with name '"+data.SubAccountServicePOSTDATA.name+"'", async({request}) => {  
+        test.describe('POST', () => {
+            test("Create with name '"+data.SubAccountServicePOSTDATA.name+"'", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/Create",data.SubAccountServicePOSTDATA);
+                const body = status[1] 
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
+            });
+    
+            for (const id of data.SubAccountServicePOSTID) {
+                test("ValidateSubAccount with Id = '"+ id + "'", async({request}) => {  
                     const query = new DepartmentFinancesAPI(request);
-                    const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/Create",data.SubAccountServicePOSTDATA);
+                    const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/ValidateSubAccount?subAccountId="+id,"");
                     const body = status[1] 
                     expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
                     console.log(body);
                 });
-        
-                for (const id of data.SubAccountServicePOSTID) {
-                    test("ValidateSubAccount with Id = '"+ id + "'", async({request}) => {  
-                        const query = new DepartmentFinancesAPI(request);
-                        const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/ValidateSubAccount?subAccountId="+id,"");
-                        const body = status[1] 
-                        expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-                        console.log(body);
-                    });
-                };
+            };
 
-                for (const id of data.SubAccountServicePOSTID) {
-                    test("ChangeIsActive with Id = '"+ id + "'", async({request}) => {  
-                        const query = new DepartmentFinancesAPI(request);
-                        const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/ChangeIsActive?projectId="+id,"");
-                        const body = status[1] 
-                        expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-                        console.log(body);
+            for (const id of data.SubAccountServicePOSTID) {
+                test("ChangeIsActive with Id = '"+ id + "'", async({request}) => {  
+                    const query = new DepartmentFinancesAPI(request);
+                    const status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/ChangeIsActive?projectId="+id,"");
+                    const body = status[1] 
+                    expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body);
                 });
             };
         })
+
+        test.describe('PUT', () => {
+            test('Put with template 1', async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);   
+                    const post_status = await query.PostRequest(tokenValueADMIN,"services/app/SubAccountService/Create",data.SubAccountServicePOSTDATA);
+                    const body = post_status[1]
+                    expect(post_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body);
+                    const id = body.result
+                    const put_status = await query.PutRequest(tokenValueADMIN, "services/app/SubAccountService/Update", 
+                    {
+                        "identifier": "PutTest",
+                        "name": "PutTest",
+                        "isActive": true,
+                        "activityTypeId": 1,
+                        "activityTypeIdentifier": 1,
+                        "personId": 15,
+                        "id": id
+                    },);
+                    const body2 = put_status[1]
+                    expect(put_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body2);
+            }); 
+        }); 
     })
     
-
     test.describe('Validation', () => {
         test.describe('GET', () => {
             test('Get by Id = Empty',async({request}) =>{

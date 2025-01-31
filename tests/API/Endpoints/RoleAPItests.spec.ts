@@ -138,6 +138,32 @@ test.describe('Authorized', () => {
                 expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
             });
         });
+
+        test.describe('PUT', () => {
+            test('Put with template 1', async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);   
+                    const post_status = await query.PostRequest(tokenValueADMIN,"services/app/Role/Create",data.RolePOSTDATA);
+                    const body = post_status[1]
+                    expect(post_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body);
+                    const id = body.result.id
+                    const put_status = await query.PutRequest(tokenValueADMIN, "services/app/Role/Update", 
+                    {
+                    "name": "PutTest",
+                    "displayName": "PutTest",
+                    "normalizedName": "PutTest",
+                    "description": "PutTest",
+                    "grantedPermissions": [
+                        "PutTest"
+                    ],
+                    "id": id
+                    },);
+                    const body2 = put_status[1]
+                    expect(put_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body2);
+                    const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/Role/Delete?Id="+ id);
+            }); 
+        }); 
     })
     test.describe('Validation', () => {
         test.describe('GET', () => {

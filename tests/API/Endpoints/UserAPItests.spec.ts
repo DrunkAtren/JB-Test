@@ -164,7 +164,38 @@ test.describe('Authorized', () => {
                 const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/User/Delete?Id="+ id);
                 expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED); 
             });
-        });   
+        }); 
+        
+        test.describe('PUT', () => {
+            test('Put with template 1', async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);   
+                    const post_status = await query.PostRequest(tokenValueADMIN,"services/app/User/Create",data.UserPOSTDATA);
+                    const body = post_status[1]
+                    expect(post_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body);
+                    const id = body.result.id
+                    const put_status = await query.PutRequest(tokenValueADMIN, "services/app/User/Update", 
+                    {
+                        "userName": "PutTest",
+                        "name": "PutTest",
+                        "surname": "PutTest",
+                        "emailAddress": "PutTest@example.com",
+                        "isActive": true,
+                        "fullName": "PutTest",
+                        "lastLoginTime": "2025-01-31T01:51:35.888Z",
+                        "creationTime": "2025-01-31T01:51:35.888Z",
+                        "roleNames": [
+                            "ADMIN"
+                        ],
+                        "id": id
+                    },);
+                    const body2 = put_status[1]
+                    expect(put_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body2);
+                    const status2 = await query.DeleteRequest(tokenValueADMIN,"services/app/User/Delete?Id="+ id);
+                    expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            }); 
+        }); 
     })
 
     test.describe('Validation', () => {

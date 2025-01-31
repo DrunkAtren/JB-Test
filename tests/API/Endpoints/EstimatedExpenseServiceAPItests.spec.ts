@@ -94,16 +94,36 @@ test.describe('Authorized', () => {
                 })
             };
         });
-            test.describe('POST', () => {
-                //Subaccountid statyczne 15, jak bedzie wywalac błąd to przez brak takiego subaccount prawdopodobnie
-                test("Create", async({request}) => {  
-                    const query = new DepartmentFinancesAPI(request);
-                    const status = await query.PostRequest(tokenValueADMIN,"services/app/EstimatedExpenseService/Create",data.EstimatedExpenseServicePOSTDATA );
-                    const body = status[1] 
-                    expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-                    console.log(body);
+        test.describe('POST', () => {
+            //Subaccountid statyczne 15, jak bedzie wywalac błąd to przez brak takiego subaccount prawdopodobnie
+            test("Create", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/EstimatedExpenseService/Create",data.EstimatedExpenseServicePOSTDATA );
+                const body = status[1] 
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
             });   
         });
+
+        test.describe('PUT', () => {
+            test('Put with template 1', async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);   
+                    const post_status = await query.PostRequest(tokenValueADMIN, "services/app/EstimatedExpenseService/Create", data.EstimatedExpenseServicePUTPOSTDATA);
+                    const body = post_status[1]
+                    expect(post_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body);
+                    const put_status = await query.PutRequest(tokenValueADMIN, "services/app/EstimatedExpenseService/UpdateOrAddMany?group=101", 
+                    [{
+                        "group": 101,
+                        "amount": 40000,
+                        "subAccountId": 15,
+                        "costTypeId": 1
+                    }],);
+                    const body2 = put_status[1]
+                    expect(put_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body2);
+            }); 
+        }); 
     });
     test.describe('Validation', () => {
         test.describe('GET', () => {

@@ -66,34 +66,72 @@ test.describe('Authorized', () => {
             }
         });
 
-            test.describe('POST', () => {
-                for (const template of data.CostTypeServicePOSTDATA) {
-                test('Create with template "' + template.name + "'", async({request}) => {  
-                    const query = new DepartmentFinancesAPI(request);
-                    const status = await query.PostRequest(tokenValueADMIN,"services/app/CostTypeService/Create",template );
-                    const body = status[1] 
-                    const id = body.result
-                    expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-                    console.log(body);
-                    const status2 = await query.DeleteRequest(tokenValueADMIN,  "services/app/CostTypeService/DeleteOne?id="+ id);
-                    expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-                });
+        test.describe('POST', () => {
+            for (const template of data.CostTypeServicePOSTDATA) {
+            test('Create with template "' + template.name + "'", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/CostTypeService/Create",template );
+                const body = status[1] 
+                const id = body.result
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
+                const status2 = await query.DeleteRequest(tokenValueADMIN,  "services/app/CostTypeService/DeleteOne?id="+ id);
+                expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            });
             }
         });  
 
-            test.describe('DELETE', () => {
-                test('Create with template "' + data.CostTypeServiceDELETEPOSTDATA.name + "'", async({request}) => {  
-                    const query = new DepartmentFinancesAPI(request);
-                    const status = await query.PostRequest(tokenValueADMIN,"services/app/CostTypeService/Create", data.CostTypeServiceDELETEPOSTDATA);
-                    const body = status[1] 
-                    const id = body.result
-                    expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-                    console.log(body);
-                    const status2 = await query.DeleteRequest(tokenValueADMIN,  "services/app/CostTypeService/DeleteOne?id="+ id);
-                    expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
-                });
-            });  
+        test.describe('DELETE', () => {
+            test('Create with template "' + data.CostTypeServiceDELETEPOSTDATA.name + "'", async({request}) => {  
+                const query = new DepartmentFinancesAPI(request);
+                const status = await query.PostRequest(tokenValueADMIN,"services/app/CostTypeService/Create", data.CostTypeServiceDELETEPOSTDATA);
+                const body = status[1] 
+                const id = body.result
+                expect(status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                console.log(body);
+                const status2 = await query.DeleteRequest(tokenValueADMIN,  "services/app/CostTypeService/DeleteOne?id="+ id);
+                expect(status2[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+            });
         });
+
+        test.describe('PUT', () => {
+            test('Put with template 1', async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);   
+                    const post_status = await query.PostRequest(tokenValueADMIN, "services/app/CostTypeService/Create", data.CostTypeServicePUTPOSTDATA);
+                    const body = post_status[1]
+                    expect(post_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body);
+                    const id = body.result
+                    const put_status = await query.PutRequest(tokenValueADMIN, "services/app/CostTypeService/Update", 
+                    {
+                        "parentId": 0,
+                        "identifier": 0,
+                        "name": "PutTest2",
+                        "isActive": true,
+                        "id": id
+                    },);
+                    const body2 = put_status[1]
+                    expect(put_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body2);
+                    await query.DeleteRequest(tokenValueADMIN,  "services/app/CostTypeService/DeleteOne?id="+ id);
+            }); 
+            for (const toggle of data.CostTypeServiceSWITCH) {
+                test('Put '+ toggle, async({request}) =>{
+                    const query = new DepartmentFinancesAPI(request);   
+                        const post_status = await query.PostRequest(tokenValueADMIN, "services/app/CostTypeService/Create", data.CostTypeServicePUTPOSTDATA);
+                        const body = post_status[1]
+                        expect(post_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                        console.log(body);
+                        const id = body.result
+                        const put_status = await query.PutRequest(tokenValueADMIN, "services/app/CostTypeService/UpdateActive?id="+id+"&active="+toggle, "",);
+                        const body2 = put_status[1]
+                        expect(put_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                        console.log(body2);
+                        await query.DeleteRequest(tokenValueADMIN,  "services/app/CostTypeService/DeleteOne?id="+ id);
+                }); 
+            }
+        });
+    })  
 
     test.describe('Validation', () => {
         test.describe('GET', () => {

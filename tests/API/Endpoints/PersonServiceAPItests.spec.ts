@@ -56,6 +56,22 @@ test.describe('Authorized', () => {
                 });
             }
         })
+
+        test.describe('PUT', () => {
+            test('Put with template 1', async({request}) =>{
+                const query = new DepartmentFinancesAPI(request);   
+                    const put_status = await query.PutRequest(tokenValueADMIN, "services/app/PersonService/Update", 
+                    {
+                        "name": "PutTest",
+                        "lastName": "PutTest",
+                        "personIdentificator": 35,
+                        "id": 24
+                    },);
+                    const body2 = put_status[1]
+                    expect(put_status[0]).toBe(data.GET_STATUS_POSITIVE_EXPECTED);
+                    console.log(body2);
+            }); 
+        }); 
     })
 
     test.describe('Validation', () => {
