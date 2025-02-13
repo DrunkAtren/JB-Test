@@ -1,0 +1,22 @@
+{
+  result: {
+    application: {
+      version: '5.5.0.0',
+      releaseDate: '2021-11-17T16:18:08+01:00',
+      features: {}
+    },
+    user: {
+      name: 'admin',
+      surname: 'admin',
+      userName: 'admin',
+      emailAddress: 'admin@WEiI.com',
+      id: 1
+    },
+    tenant: { tenancyName: 'WEiI', name: 'WEiI', id: 1 }
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

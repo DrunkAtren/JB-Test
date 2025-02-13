@@ -1,0 +1,216 @@
+{
+  result: [
+    {
+      amount: 5000,
+      insertDate: '2019-11-03T00:00:00',
+      description: 'Up',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 10
+    },
+    {
+      amount: 1337.05,
+      insertDate: '2019-11-03T00:00:00',
+      description: 'No offensive content',
+      subAccountId: 16,
+      identifier: '500.016',
+      name: 'Publikacje naukowe 2020-2022',
+      id: 11
+    },
+    {
+      amount: 8391.5,
+      insertDate: '2021-02-18T00:00:00',
+      description: 'Dotacja europejska na rok 2021',
+      subAccountId: 17,
+      identifier: '551.017',
+      name: 'Podróże małe i duże',
+      id: 12
+    },
+    {
+      amount: 2715,
+      insertDate: '2020-01-07T00:00:00',
+      description: 'Dotacja z budżetu marszałkowskiego na rok 2020',
+      subAccountId: 18,
+      identifier: '502.018',
+      name: 'Promocja politechniki',
+      id: 13
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-26T02:59:09.42',
+      description: 'string',
+      subAccountId: 31,
+      identifier: '500.031',
+      name: 'Test1',
+      id: 21
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-26T02:59:35.4866667',
+      description: 'string',
+      subAccountId: 31,
+      identifier: '500.031',
+      name: 'Test1',
+      id: 23
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-26T03:21:51.6033333',
+      description: 'string',
+      subAccountId: 31,
+      identifier: '500.031',
+      name: 'Test1',
+      id: 24
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-26T03:21:54.4133333',
+      description: 'string',
+      subAccountId: 31,
+      identifier: '500.031',
+      name: 'Test1',
+      id: 25
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-26T03:22:02.99',
+      description: 'test',
+      subAccountId: 31,
+      identifier: '500.031',
+      name: 'Test1',
+      id: 26
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-26T03:25:00.0233333',
+      description: 'Test1',
+      subAccountId: 31,
+      identifier: '500.031',
+      name: 'Test1',
+      id: 27
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-26T03:29:22.6933333',
+      description: 'Test1',
+      subAccountId: 31,
+      identifier: '500.031',
+      name: 'Test1',
+      id: 28
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-26T03:46:34.1533333',
+      description: 'Test1',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 29
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-30T03:01:37.5766667',
+      description: 'Test1',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 30
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-30T03:03:16.2833333',
+      description: 'Test1',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 31
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-30T03:05:08.21',
+      description: 'Test1',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 32
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-31T02:07:24.2',
+      description: 'Test1',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 33
+    },
+    {
+      amount: 200,
+      insertDate: '2025-01-31T02:08:26.53',
+      description: 'PutTEST',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 34
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-31T03:35:35.0466667',
+      description: 'Test1',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 35
+    },
+    {
+      amount: 200,
+      insertDate: '2025-01-31T03:35:35.14',
+      description: 'PutTEST',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 36
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-31T03:39:15.8633333',
+      description: 'Test1',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 37
+    },
+    {
+      amount: 200,
+      insertDate: '2025-01-31T03:39:15.9933333',
+      description: 'PutTEST',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 38
+    },
+    {
+      amount: 1,
+      insertDate: '2025-01-31T03:43:20.7033333',
+      description: 'Test1',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 39
+    },
+    {
+      amount: 200,
+      insertDate: '2025-01-31T03:43:20.8566667',
+      description: 'PutTEST',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 40
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

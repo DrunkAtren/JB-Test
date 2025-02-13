@@ -1,0 +1,8 @@
+{
+  result: { identifier: 551, name: 'Rekrutacja', id: 7 },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

@@ -1,0 +1,33 @@
+{
+  result: [
+    {
+      parentId: 5,
+      parent: [Object],
+      identifier: 10,
+      name: 'Delegacje naukowe',
+      isActive: true,
+      id: 6
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 463,
+      name: 'Delegacje',
+      isActive: true,
+      id: 5
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 416,
+      name: 'Aparatura',
+      isActive: true,
+      id: 7
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

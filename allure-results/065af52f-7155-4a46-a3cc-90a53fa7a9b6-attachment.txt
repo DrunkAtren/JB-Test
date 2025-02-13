@@ -1,0 +1,14 @@
+{
+  result: {
+    parentId: null,
+    identifier: 469,
+    name: 'Pozostałe koszty',
+    isActive: true,
+    id: 9
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

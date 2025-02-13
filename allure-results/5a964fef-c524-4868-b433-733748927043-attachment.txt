@@ -1,0 +1,17 @@
+WEiI
+{
+  result: { state: 1, tenantId: 1 },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}
+{
+  result: { state: 1, tenantId: 1 },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

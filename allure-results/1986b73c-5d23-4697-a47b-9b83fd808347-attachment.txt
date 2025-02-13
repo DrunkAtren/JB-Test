@@ -1,0 +1,15 @@
+{
+  result: {
+    name: 'Admin',
+    displayName: 'Admin',
+    normalizedName: 'ADMIN',
+    description: null,
+    grantedPermissions: [ 'Pages.Users', 'Pages.Roles' ],
+    id: 1
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

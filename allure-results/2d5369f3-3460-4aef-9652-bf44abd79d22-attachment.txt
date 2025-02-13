@@ -1,0 +1,14 @@
+{
+  result: {
+    parentId: null,
+    identifier: 416,
+    name: 'Aparatura',
+    isActive: true,
+    id: 7
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

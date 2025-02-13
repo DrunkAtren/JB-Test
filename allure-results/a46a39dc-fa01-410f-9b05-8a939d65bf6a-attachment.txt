@@ -1,0 +1,14 @@
+{
+  result: {
+    parentId: 3,
+    identifier: 10,
+    name: 'Rzeczy podręczne',
+    isActive: true,
+    id: 4
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

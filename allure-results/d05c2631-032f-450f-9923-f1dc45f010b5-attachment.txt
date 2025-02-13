@@ -1,0 +1,24 @@
+{
+  result: {
+    isSuccess: true,
+    hasOpenedOrders: false,
+    hasOrdersGreaterThanEstimations: false
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}
+{
+  result: {
+    isSuccess: true,
+    hasOpenedOrders: false,
+    hasOrdersGreaterThanEstimations: false
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

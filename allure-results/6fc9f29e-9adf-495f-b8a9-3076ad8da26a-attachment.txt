@@ -1,0 +1,69 @@
+{
+  result: [
+    {
+      wirka: 444,
+      amount: 1200,
+      isClosed: true,
+      insertDate: '2021-01-01T00:00:00',
+      description: 'Testujemy raporty 1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 20
+    },
+    {
+      wirka: 445,
+      amount: 700,
+      isClosed: true,
+      insertDate: '2021-10-10T00:00:00',
+      description: 'Testujemy raporty 2',
+      subAccountId: 15,
+      costTypeId: 3,
+      id: 21
+    },
+    {
+      wirka: 446,
+      amount: 1400,
+      isClosed: false,
+      insertDate: '2021-01-01T00:00:00',
+      description: 'Projekt nie zamkniety',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 22
+    },
+    {
+      wirka: 404,
+      amount: 512.9,
+      isClosed: true,
+      insertDate: '2021-01-22T00:00:00',
+      description: 'Konferencja Młodych Naukowców Grudzień 2019',
+      subAccountId: 18,
+      costTypeId: 3,
+      id: 25
+    },
+    {
+      wirka: 401,
+      amount: 9477.71,
+      isClosed: true,
+      insertDate: '2019-11-03T00:00:00',
+      description: 'Wyjazd do Wuhan',
+      subAccountId: 20,
+      costTypeId: 3,
+      id: 30
+    },
+    {
+      wirka: 1423,
+      amount: 123,
+      isClosed: false,
+      insertDate: '2025-02-02T20:42:15.105',
+      description: 'asf',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 52
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

@@ -1,0 +1,15 @@
+{
+  result: {
+    parentId: null,
+    identifier: 463,
+    name: 'Delegacje',
+    isActive: true,
+    insertDate: '2020-11-03T00:00:00',
+    id: 5
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

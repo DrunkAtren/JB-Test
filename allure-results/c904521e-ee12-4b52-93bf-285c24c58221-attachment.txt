@@ -1,0 +1,87 @@
+{
+  result: [
+    {
+      wirka: 444,
+      amount: 1200,
+      isClosed: true,
+      insertDate: '2021-01-01T00:00:00',
+      description: 'Testujemy raporty 1',
+      subAccount: [Object],
+      costType: [Object],
+      invoices: [Array],
+      sumOfInvoices: 71200,
+      colectionSize: 0,
+      id: 20
+    },
+    {
+      wirka: 445,
+      amount: 700,
+      isClosed: true,
+      insertDate: '2021-10-10T00:00:00',
+      description: 'Testujemy raporty 2',
+      subAccount: [Object],
+      costType: [Object],
+      invoices: [Array],
+      sumOfInvoices: 700,
+      colectionSize: 0,
+      id: 21
+    },
+    {
+      wirka: 446,
+      amount: 1400,
+      isClosed: false,
+      insertDate: '2021-01-01T00:00:00',
+      description: 'Projekt nie zamkniety',
+      subAccount: [Object],
+      costType: [Object],
+      invoices: [Array],
+      sumOfInvoices: 1350,
+      colectionSize: 0,
+      id: 22
+    },
+    {
+      wirka: 123,
+      amount: 1220.5,
+      isClosed: false,
+      insertDate: '2021-01-01T00:00:00',
+      description: 'Nowy sprzęt do laboratorium podstaw elektroniki',
+      subAccount: [Object],
+      costType: [Object],
+      invoices: [Array],
+      sumOfInvoices: 1200,
+      colectionSize: 0,
+      id: 23
+    },
+    {
+      wirka: 102,
+      amount: 4790,
+      isClosed: true,
+      insertDate: '2021-04-01T00:00:00',
+      description: 'Koncert metalowy',
+      subAccount: [Object],
+      costType: [Object],
+      invoices: [Array],
+      sumOfInvoices: 3867,
+      colectionSize: 0,
+      id: 24
+    },
+    {
+      wirka: 404,
+      amount: 512.9,
+      isClosed: true,
+      insertDate: '2021-01-22T00:00:00',
+      description: 'Konferencja Młodych Naukowców Grudzień 2019',
+      subAccount: [Object],
+      costType: [Object],
+      invoices: [Array],
+      sumOfInvoices: 455,
+      colectionSize: 0,
+      id: 25
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

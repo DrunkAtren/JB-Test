@@ -1,0 +1,39 @@
+{
+  result: [
+    {
+      group: 102,
+      insertDate: '2025-01-31T03:35:39.9500318',
+      estimatedExpenses: [Array]
+    },
+    {
+      group: 101,
+      insertDate: '2025-01-31T02:21:33.8204357',
+      estimatedExpenses: [Array]
+    },
+    {
+      group: 100,
+      insertDate: '2025-01-31T02:20:48.43',
+      estimatedExpenses: [Array]
+    },
+    {
+      group: 2,
+      insertDate: '2022-01-13T13:00:24.8',
+      estimatedExpenses: [Array]
+    },
+    {
+      group: 1,
+      insertDate: '2021-01-05T00:00:00',
+      estimatedExpenses: [Array]
+    },
+    {
+      group: 0,
+      insertDate: '2025-01-26T03:46:23.62',
+      estimatedExpenses: [Array]
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

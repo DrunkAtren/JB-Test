@@ -1,0 +1,149 @@
+{
+  result: [
+    {
+      wirka: 102,
+      amount: 4790,
+      isClosed: true,
+      insertDate: '2021-04-01T00:00:00',
+      description: 'Koncert metalowy',
+      subAccountId: 18,
+      costTypeId: 3,
+      id: 24
+    },
+    {
+      wirka: 106,
+      amount: 4790,
+      isClosed: true,
+      insertDate: '2020-04-01T00:00:00',
+      description: 'Wystrój ciwe',
+      subAccountId: 18,
+      costTypeId: 1,
+      id: 28
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'string',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 38
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'Test1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 39
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'Test1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 41
+    },
+    {
+      wirka: 1000,
+      amount: 100,
+      isClosed: false,
+      insertDate: '2025-01-27T20:06:56.883',
+      description: 'string',
+      subAccountId: 31,
+      costTypeId: 1,
+      id: 43
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'Test1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 44
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'Test1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 45
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'Test1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 46
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'Test1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 47
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'Test1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 48
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'Test1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 49
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'Test1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 53
+    },
+    {
+      wirka: 10,
+      amount: 10,
+      isClosed: false,
+      insertDate: '2025-01-26T03:52:54.264',
+      description: 'Test1',
+      subAccountId: 15,
+      costTypeId: 1,
+      id: 54
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

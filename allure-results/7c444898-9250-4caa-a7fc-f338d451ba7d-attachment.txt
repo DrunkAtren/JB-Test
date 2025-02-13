@@ -1,0 +1,8 @@
+{
+  result: { identifier: 500, name: 'Dydaktyka', id: 1 },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

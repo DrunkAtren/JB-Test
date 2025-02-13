@@ -1,0 +1,17 @@
+admin
+{
+  result: { state: 3, tenantId: null },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}
+{
+  result: { state: 3, tenantId: null },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

@@ -1,0 +1,8 @@
+{
+  result: { tenancyName: 'WAiW', name: 'WAiW', isActive: true, id: 3 },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

@@ -1,0 +1,233 @@
+{
+  result: [
+    {
+      group: 1,
+      amount: 1000,
+      insertDate: '2021-01-05T00:00:00',
+      subAccount: [Object],
+      costType: [Object],
+      id: 14
+    },
+    {
+      group: 2,
+      amount: 1500,
+      insertDate: '2022-01-13T13:00:24.8',
+      subAccount: [Object],
+      costType: [Object],
+      id: 15
+    },
+    {
+      group: 2,
+      amount: 2000,
+      insertDate: '2022-01-13T13:00:24.8',
+      subAccount: [Object],
+      costType: [Object],
+      id: 16
+    },
+    {
+      group: 1,
+      amount: 500,
+      insertDate: '2022-01-13T13:00:24.84',
+      subAccount: [Object],
+      costType: [Object],
+      id: 17
+    },
+    {
+      group: 2,
+      amount: 15.5,
+      insertDate: '2022-01-13T13:00:24.84',
+      subAccount: [Object],
+      costType: [Object],
+      id: 18
+    },
+    {
+      group: 1,
+      amount: 12.5,
+      insertDate: '2022-01-13T13:00:24.84',
+      subAccount: [Object],
+      costType: [Object],
+      id: 19
+    },
+    {
+      group: 2,
+      amount: 450,
+      insertDate: '2022-01-13T13:00:24.84',
+      subAccount: [Object],
+      costType: [Object],
+      id: 20
+    },
+    {
+      group: 0,
+      amount: 1,
+      insertDate: '2025-01-26T03:26:44.4733333',
+      subAccount: [Object],
+      costType: [Object],
+      id: 28
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-26T03:31:16.8',
+      subAccount: [Object],
+      costType: [Object],
+      id: 29
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-26T03:38:28.1533333',
+      subAccount: [Object],
+      costType: [Object],
+      id: 30
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-26T03:39:21.3',
+      subAccount: [Object],
+      costType: [Object],
+      id: 31
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-26T03:46:23.62',
+      subAccount: [Object],
+      costType: [Object],
+      id: 32
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-30T03:01:39.86',
+      subAccount: [Object],
+      costType: [Object],
+      id: 33
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-30T03:03:19.7966667',
+      subAccount: [Object],
+      costType: [Object],
+      id: 34
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-30T03:05:11.9233333',
+      subAccount: [Object],
+      costType: [Object],
+      id: 35
+    },
+    {
+      group: 1,
+      amount: 4124125,
+      insertDate: '2025-01-31T02:14:30.9405953',
+      subAccount: [Object],
+      costType: [Object],
+      id: 39
+    },
+    {
+      group: 100,
+      amount: 20000,
+      insertDate: '2025-01-31T02:20:48.43',
+      subAccount: [Object],
+      costType: [Object],
+      id: 40
+    },
+    {
+      group: 100,
+      amount: 20000,
+      insertDate: '2025-01-31T02:21:33.77',
+      subAccount: [Object],
+      costType: [Object],
+      id: 41
+    },
+    {
+      group: 101,
+      amount: 40000,
+      insertDate: '2025-01-31T02:21:33.8204357',
+      subAccount: [Object],
+      costType: [Object],
+      id: 42
+    },
+    {
+      group: 101,
+      amount: 20000,
+      insertDate: '2025-01-31T03:35:39.91',
+      subAccount: [Object],
+      costType: [Object],
+      id: 43
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-31T03:35:39.91',
+      subAccount: [Object],
+      costType: [Object],
+      id: 44
+    },
+    {
+      group: 102,
+      amount: 40000,
+      insertDate: '2025-01-31T03:35:39.9500318',
+      subAccount: [Object],
+      costType: [Object],
+      id: 45
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-31T03:39:20.89',
+      subAccount: [Object],
+      costType: [Object],
+      id: 46
+    },
+    {
+      group: 101,
+      amount: 20000,
+      insertDate: '2025-01-31T03:39:20.9133333',
+      subAccount: [Object],
+      costType: [Object],
+      id: 47
+    },
+    {
+      group: 102,
+      amount: 40000,
+      insertDate: '2025-01-31T03:39:20.9474079',
+      subAccount: [Object],
+      costType: [Object],
+      id: 48
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-31T03:43:25.9666667',
+      subAccount: [Object],
+      costType: [Object],
+      id: 49
+    },
+    {
+      group: 101,
+      amount: 20000,
+      insertDate: '2025-01-31T03:43:25.97',
+      subAccount: [Object],
+      costType: [Object],
+      id: 50
+    },
+    {
+      group: 102,
+      amount: 40000,
+      insertDate: '2025-01-31T03:43:26.0082777',
+      subAccount: [Object],
+      costType: [Object],
+      id: 51
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

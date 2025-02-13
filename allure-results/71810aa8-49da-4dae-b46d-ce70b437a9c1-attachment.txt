@@ -1,0 +1,18 @@
+{
+  result: {
+    role: {
+      name: 'Admin',
+      displayName: 'Admin',
+      description: null,
+      isStatic: true,
+      id: 1
+    },
+    permissions: [ [Object], [Object] ],
+    grantedPermissionNames: [ 'Pages.Users', 'Pages.Roles' ]
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

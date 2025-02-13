@@ -1,0 +1,97 @@
+{
+  result: [
+    {
+      parentId: null,
+      identifier: 429,
+      name: 'Usługi',
+      isActive: true,
+      insertDate: '2021-11-03T00:00:00',
+      id: 1
+    },
+    {
+      parentId: 1,
+      identifier: 60,
+      name: 'Usługi tłumaczenia / Usługi obce',
+      isActive: true,
+      insertDate: '2021-11-03T00:00:00',
+      id: 2
+    },
+    {
+      parentId: null,
+      identifier: 411,
+      name: 'Materiały',
+      isActive: true,
+      insertDate: '2021-11-03T00:00:00',
+      id: 3
+    },
+    {
+      parentId: 3,
+      identifier: 10,
+      name: 'Rzeczy podręczne',
+      isActive: true,
+      insertDate: '2021-11-03T00:00:00',
+      id: 4
+    },
+    {
+      parentId: null,
+      identifier: 463,
+      name: 'Delegacje',
+      isActive: true,
+      insertDate: '2020-11-03T00:00:00',
+      id: 5
+    },
+    {
+      parentId: 5,
+      identifier: 10,
+      name: 'Delegacje naukowe',
+      isActive: true,
+      insertDate: '2020-11-03T00:00:00',
+      id: 6
+    },
+    {
+      parentId: null,
+      identifier: 416,
+      name: 'Aparatura',
+      isActive: true,
+      insertDate: '2020-11-03T00:00:00',
+      id: 7
+    },
+    {
+      parentId: null,
+      identifier: 445,
+      name: 'Konferencje',
+      isActive: true,
+      insertDate: '2019-11-03T00:00:00',
+      id: 8
+    },
+    {
+      parentId: null,
+      identifier: 469,
+      name: 'Pozostałe koszty',
+      isActive: true,
+      insertDate: '2019-11-03T00:00:00',
+      id: 9
+    },
+    {
+      parentId: null,
+      identifier: 470,
+      name: 'Koszty pośrednie',
+      isActive: true,
+      insertDate: '2019-11-03T00:00:00',
+      id: 10
+    },
+    {
+      parentId: 1,
+      identifier: 14,
+      name: 'Netflix',
+      isActive: true,
+      insertDate: '2021-01-01T00:00:00',
+      id: 20
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

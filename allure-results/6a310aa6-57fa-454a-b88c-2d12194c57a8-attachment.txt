@@ -1,0 +1,8 @@
+{
+  result: { totalCount: 2, items: [ [Object] ] },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

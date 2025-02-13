@@ -1,0 +1,49 @@
+{
+  result: [
+    {
+      parentId: null,
+      identifier: 429,
+      name: 'Usługi',
+      isActive: true,
+      insertDate: '2021-11-03T00:00:00',
+      id: 1
+    },
+    {
+      parentId: 1,
+      identifier: 60,
+      name: 'Usługi tłumaczenia / Usługi obce',
+      isActive: true,
+      insertDate: '2021-11-03T00:00:00',
+      id: 2
+    },
+    {
+      parentId: null,
+      identifier: 411,
+      name: 'Materiały',
+      isActive: true,
+      insertDate: '2021-11-03T00:00:00',
+      id: 3
+    },
+    {
+      parentId: 3,
+      identifier: 10,
+      name: 'Rzeczy podręczne',
+      isActive: true,
+      insertDate: '2021-11-03T00:00:00',
+      id: 4
+    },
+    {
+      parentId: 1,
+      identifier: 14,
+      name: 'Netflix',
+      isActive: true,
+      insertDate: '2021-01-01T00:00:00',
+      id: 20
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

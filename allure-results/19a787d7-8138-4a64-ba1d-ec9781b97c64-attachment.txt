@@ -1,0 +1,65 @@
+{
+  result: [
+    {
+      identifier: '500.03.444',
+      name: 'Tworzenie raportów dla aplikacji',
+      isActive: false,
+      openDate: 2021,
+      closeDate: 2025,
+      activityTypeId: 1,
+      personId: 11,
+      subAccountBudget: 6210,
+      personFullName: 'Rafał  Wojszczyk',
+      status: 4,
+      hasAnyOrders: true,
+      id: 15
+    },
+    {
+      identifier: '500.03.503',
+      name: 'Publikacje naukowe 2020-2022',
+      isActive: false,
+      openDate: 2019,
+      closeDate: 2021,
+      activityTypeId: 1,
+      personId: 9,
+      subAccountBudget: 1337.05,
+      personFullName: 'Andrzej  Krzyżanowski',
+      status: 3,
+      hasAnyOrders: true,
+      id: 16
+    },
+    {
+      identifier: '551.03.517',
+      name: 'Podróże małe i duże',
+      isActive: true,
+      openDate: 2020,
+      closeDate: 0,
+      activityTypeId: 7,
+      personId: 12,
+      subAccountBudget: 8391.5,
+      personFullName: 'Katarzyna  Sikora',
+      status: 0,
+      hasAnyOrders: false,
+      id: 17
+    },
+    {
+      identifier: '500.03.522',
+      name: 'Aktywny stary projekt',
+      isActive: true,
+      openDate: 2019,
+      closeDate: 0,
+      activityTypeId: 1,
+      personId: 11,
+      subAccountBudget: 0,
+      personFullName: 'Rafał  Wojszczyk',
+      status: 0,
+      hasAnyOrders: false,
+      id: 19
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

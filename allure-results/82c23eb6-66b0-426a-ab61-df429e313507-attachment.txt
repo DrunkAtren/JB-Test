@@ -1,0 +1,33 @@
+{
+  result: [
+    {
+      parentId: null,
+      parent: null,
+      identifier: 445,
+      name: 'Konferencje',
+      isActive: true,
+      id: 8
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 469,
+      name: 'Pozostałe koszty',
+      isActive: true,
+      id: 9
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 470,
+      name: 'Koszty pośrednie',
+      isActive: true,
+      id: 10
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

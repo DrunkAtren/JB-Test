@@ -1,0 +1,12 @@
+{
+  result: {
+    identifier: 524,
+    name: 'Dział. Statutowa Młodych Naukowców',
+    id: 6
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

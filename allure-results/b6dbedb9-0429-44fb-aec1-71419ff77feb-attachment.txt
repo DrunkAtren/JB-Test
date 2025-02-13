@@ -1,0 +1,8 @@
+{
+  result: { identifier: 5052020, name: 'Projekty badawcze 2020', id: 9 },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

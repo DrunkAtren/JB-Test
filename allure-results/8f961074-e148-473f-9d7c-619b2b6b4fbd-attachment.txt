@@ -1,0 +1,25 @@
+{
+  result: [
+    {
+      group: 1,
+      amount: 1000,
+      insertDate: '2021-01-05T00:00:00',
+      subAccount: null,
+      costType: [Object],
+      id: 14
+    },
+    {
+      group: 1,
+      amount: 4124125,
+      insertDate: '2025-01-31T02:14:30.9405953',
+      subAccount: null,
+      costType: [Object],
+      id: 39
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

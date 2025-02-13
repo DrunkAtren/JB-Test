@@ -1,0 +1,27 @@
+{
+  result: [
+    {
+      amount: 5000,
+      insertDate: '2019-11-03T00:00:00',
+      description: 'Up',
+      subAccountId: 15,
+      identifier: '500.015',
+      name: 'Tworzenie raportów dla aplikacji',
+      id: 10
+    },
+    {
+      amount: 1337.05,
+      insertDate: '2019-11-03T00:00:00',
+      description: 'No offensive content',
+      subAccountId: 16,
+      identifier: '500.016',
+      name: 'Publikacje naukowe 2020-2022',
+      id: 11
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

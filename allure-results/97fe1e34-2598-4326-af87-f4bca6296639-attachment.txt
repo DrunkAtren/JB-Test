@@ -1,0 +1,51 @@
+{
+  result: [
+    {
+      identifier: '500.03.444',
+      name: 'Tworzenie raportów dla aplikacji',
+      isActive: true,
+      openDate: 2021,
+      closeDate: 0,
+      activityTypeId: 1,
+      personId: 11,
+      subAccountBudget: 6009,
+      personFullName: 'Rafał  Wojszczyk',
+      status: 4,
+      hasAnyOrders: true,
+      id: 15
+    },
+    {
+      identifier: '551.03.517',
+      name: 'Podróże małe i duże',
+      isActive: true,
+      openDate: 2020,
+      closeDate: 0,
+      activityTypeId: 7,
+      personId: 12,
+      subAccountBudget: 8391.5,
+      personFullName: 'Katarzyna  Sikora',
+      status: 0,
+      hasAnyOrders: false,
+      id: 17
+    },
+    {
+      identifier: '500.03.522',
+      name: 'Aktywny stary projekt',
+      isActive: true,
+      openDate: 2019,
+      closeDate: 0,
+      activityTypeId: 1,
+      personId: 11,
+      subAccountBudget: 0,
+      personFullName: 'Rafał  Wojszczyk',
+      status: 0,
+      hasAnyOrders: false,
+      id: 19
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

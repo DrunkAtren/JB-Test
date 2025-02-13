@@ -1,0 +1,121 @@
+{
+  result: [
+    {
+      name: 'Rafał',
+      lastName: 'Wojszczyk',
+      isActive: true,
+      personIdentificator: 3,
+      projectNames: [],
+      id: 11
+    },
+    {
+      name: 'string',
+      lastName: 'string',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 17
+    },
+    {
+      name: 'Test',
+      lastName: 'Test',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 18
+    },
+    {
+      name: 'Test',
+      lastName: 'Test',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 19
+    },
+    {
+      name: 'Test',
+      lastName: 'Test',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 20
+    },
+    {
+      name: 'Test',
+      lastName: 'Test',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 21
+    },
+    {
+      name: 'Test',
+      lastName: 'Test',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 22
+    },
+    {
+      name: 'string',
+      lastName: 'string',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 23
+    },
+    {
+      name: 'PutTest',
+      lastName: 'PutTest',
+      isActive: true,
+      personIdentificator: 35,
+      projectNames: [],
+      id: 24
+    },
+    {
+      name: 'Test',
+      lastName: 'Test',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 25
+    },
+    {
+      name: 'Test',
+      lastName: 'Test',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 26
+    },
+    {
+      name: 'Test',
+      lastName: 'Test',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 27
+    },
+    {
+      name: 'Test',
+      lastName: 'Test',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 28
+    },
+    {
+      name: 'Test',
+      lastName: 'Test',
+      isActive: true,
+      personIdentificator: 0,
+      projectNames: [],
+      id: 29
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

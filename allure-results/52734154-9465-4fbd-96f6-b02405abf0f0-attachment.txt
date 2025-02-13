@@ -1,0 +1,29 @@
+{
+  result: [
+    {
+      wirka: 500,
+      amount: 512.9,
+      isClosed: true,
+      insertDate: '2019-01-22T00:00:00',
+      description: 'Odkorowanie kanału sułeskiego',
+      subAccountId: 20,
+      costTypeId: 1,
+      id: 29
+    },
+    {
+      wirka: 401,
+      amount: 9477.71,
+      isClosed: true,
+      insertDate: '2019-11-03T00:00:00',
+      description: 'Wyjazd do Wuhan',
+      subAccountId: 20,
+      costTypeId: 3,
+      id: 30
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

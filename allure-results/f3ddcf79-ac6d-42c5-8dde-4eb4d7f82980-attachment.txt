@@ -1,0 +1,38 @@
+{
+  result: {
+    name: 'Test',
+    displayName: 'Test',
+    normalizedName: 'TEST',
+    description: 'Test',
+    grantedPermissions: [],
+    id: 25
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}
+{
+  result: {
+    name: 'Test',
+    displayName: 'Test',
+    normalizedName: 'TEST',
+    description: 'Test',
+    grantedPermissions: [],
+    id: 25
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}
+{
+  result: null,
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

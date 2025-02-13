@@ -1,0 +1,27 @@
+{
+  result: [
+    { identifier: 500, name: 'Dydaktyka', id: 1 },
+    { identifier: 502, name: 'Studia podyplomowe', id: 2 },
+    { identifier: 503, name: 'Badania własne', id: 3 },
+    { identifier: 504, name: 'Działalność statutowa', id: 4 },
+    { identifier: 521, name: 'Koszty statutowe', id: 5 },
+    {
+      identifier: 524,
+      name: 'Dział. Statutowa Młodych Naukowców',
+      id: 6
+    },
+    { identifier: 551, name: 'Rekrutacja', id: 7 },
+    { identifier: 505, name: 'Projekty badawcze', id: 8 },
+    { identifier: 5052020, name: 'Projekty badawcze 2020', id: 9 },
+    { identifier: 0, name: 'string', id: 14 },
+    { identifier: 0, name: 'string', id: 16 },
+    { identifier: 0, name: 'stridang', id: 28 },
+    { identifier: 0, name: 'CreateTest1', id: 29 },
+    { identifier: 0, name: 'PutTest1', id: 30 }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

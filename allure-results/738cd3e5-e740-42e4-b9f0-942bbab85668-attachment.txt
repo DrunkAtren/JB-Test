@@ -1,0 +1,48 @@
+{
+  result: [
+    {
+      wirka: 777,
+      amount: 9477.71,
+      isClosed: true,
+      insertDate: '2020-11-03T00:00:00',
+      description: 'Turniej w lola',
+      subAccount: [Object],
+      costType: [Object],
+      invoices: [],
+      sumOfInvoices: 0,
+      colectionSize: 0,
+      id: 26
+    },
+    {
+      wirka: 111,
+      amount: 1220.5,
+      isClosed: false,
+      insertDate: '2020-01-01T00:00:00',
+      description: 'Turniej w cs',
+      subAccount: [Object],
+      costType: [Object],
+      invoices: [],
+      sumOfInvoices: 0,
+      colectionSize: 0,
+      id: 27
+    },
+    {
+      wirka: 106,
+      amount: 4790,
+      isClosed: true,
+      insertDate: '2020-04-01T00:00:00',
+      description: 'Wystrój ciwe',
+      subAccount: [Object],
+      costType: [Object],
+      invoices: [],
+      sumOfInvoices: 0,
+      colectionSize: 0,
+      id: 28
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

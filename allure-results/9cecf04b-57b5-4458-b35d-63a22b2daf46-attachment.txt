@@ -1,0 +1,97 @@
+{
+  result: [
+    {
+      parentId: 1,
+      parent: [Object],
+      identifier: 60,
+      name: 'Usługi tłumaczenia / Usługi obce',
+      isActive: true,
+      id: 2
+    },
+    {
+      parentId: 1,
+      parent: [Object],
+      identifier: 14,
+      name: 'Netflix',
+      isActive: true,
+      id: 20
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 429,
+      name: 'Usługi',
+      isActive: true,
+      id: 1
+    },
+    {
+      parentId: 3,
+      parent: [Object],
+      identifier: 10,
+      name: 'Rzeczy podręczne',
+      isActive: true,
+      id: 4
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 411,
+      name: 'Materiały',
+      isActive: true,
+      id: 3
+    },
+    {
+      parentId: 5,
+      parent: [Object],
+      identifier: 10,
+      name: 'Delegacje naukowe',
+      isActive: true,
+      id: 6
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 463,
+      name: 'Delegacje',
+      isActive: true,
+      id: 5
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 416,
+      name: 'Aparatura',
+      isActive: true,
+      id: 7
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 445,
+      name: 'Konferencje',
+      isActive: true,
+      id: 8
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 469,
+      name: 'Pozostałe koszty',
+      isActive: true,
+      id: 9
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 470,
+      name: 'Koszty pośrednie',
+      isActive: true,
+      id: 10
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

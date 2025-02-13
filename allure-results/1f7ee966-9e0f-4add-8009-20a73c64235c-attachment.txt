@@ -1,0 +1,18 @@
+{
+  result: [
+    {
+      amount: 8391.5,
+      insertDate: '2021-02-18T00:00:00',
+      description: 'Dotacja europejska na rok 2021',
+      subAccountId: 17,
+      identifier: '551.017',
+      name: 'Podróże małe i duże',
+      id: 12
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

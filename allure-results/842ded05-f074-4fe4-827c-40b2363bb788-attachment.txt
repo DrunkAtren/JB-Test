@@ -1,0 +1,33 @@
+{
+  result: [
+    {
+      parentId: null,
+      identifier: 445,
+      name: 'Konferencje',
+      isActive: true,
+      insertDate: '2019-11-03T00:00:00',
+      id: 8
+    },
+    {
+      parentId: null,
+      identifier: 469,
+      name: 'Pozostałe koszty',
+      isActive: true,
+      insertDate: '2019-11-03T00:00:00',
+      id: 9
+    },
+    {
+      parentId: null,
+      identifier: 470,
+      name: 'Koszty pośrednie',
+      isActive: true,
+      insertDate: '2019-11-03T00:00:00',
+      id: 10
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

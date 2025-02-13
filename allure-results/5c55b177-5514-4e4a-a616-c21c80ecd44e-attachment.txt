@@ -1,0 +1,19 @@
+{
+  result: [
+    {
+      wirka: 1000,
+      amount: 100,
+      isClosed: false,
+      insertDate: '2025-01-27T20:06:56.883',
+      description: 'string',
+      subAccountId: 31,
+      costTypeId: 1,
+      id: 43
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

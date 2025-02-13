@@ -1,0 +1,15 @@
+{
+  result: {
+    parentId: null,
+    identifier: 445,
+    name: 'Konferencje',
+    isActive: true,
+    insertDate: '2019-11-03T00:00:00',
+    id: 8
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

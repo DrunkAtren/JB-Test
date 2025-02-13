@@ -1,0 +1,42 @@
+{
+  result: [
+    {
+      costTypeIdentifier: 429,
+      costTypeId: 1,
+      costTypeName: 'Usługi',
+      subAccountId: 15,
+      ordersAmount: 0,
+      invoicesAmount: 0,
+      amount: 40000,
+      insertDate: '2025-01-31T03:35:39.9500318',
+      id: 45
+    },
+    {
+      costTypeIdentifier: 429,
+      costTypeId: 1,
+      costTypeName: 'Usługi',
+      subAccountId: 15,
+      ordersAmount: 0,
+      invoicesAmount: 0,
+      amount: 40000,
+      insertDate: '2025-01-31T03:39:20.9474079',
+      id: 48
+    },
+    {
+      costTypeIdentifier: 429,
+      costTypeId: 1,
+      costTypeName: 'Usługi',
+      subAccountId: 15,
+      ordersAmount: 0,
+      invoicesAmount: 0,
+      amount: 40000,
+      insertDate: '2025-01-31T03:43:26.0082777',
+      id: 51
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

@@ -1,0 +1,14 @@
+{
+  result: {
+    parentId: 5,
+    identifier: 10,
+    name: 'Delegacje naukowe',
+    isActive: true,
+    id: 6
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

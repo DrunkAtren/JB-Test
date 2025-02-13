@@ -1,0 +1,51 @@
+{
+  result: [
+    {
+      identifier: '500.03.503',
+      name: 'Publikacje naukowe 2020-2022',
+      isActive: false,
+      openDate: 2019,
+      closeDate: 2021,
+      activityTypeId: 1,
+      personId: 9,
+      subAccountBudget: 1337.05,
+      personFullName: 'Andrzej  Krzyżanowski',
+      status: 3,
+      hasAnyOrders: true,
+      id: 16
+    },
+    {
+      identifier: '500.03.522',
+      name: 'Aktywny stary projekt',
+      isActive: true,
+      openDate: 2019,
+      closeDate: 0,
+      activityTypeId: 1,
+      personId: 11,
+      subAccountBudget: 0,
+      personFullName: 'Rafał  Wojszczyk',
+      status: 0,
+      hasAnyOrders: false,
+      id: 19
+    },
+    {
+      identifier: '500.03.523',
+      name: 'Stary projekt',
+      isActive: false,
+      openDate: 2019,
+      closeDate: 2020,
+      activityTypeId: 1,
+      personId: 9,
+      subAccountBudget: 0,
+      personFullName: 'Andrzej  Krzyżanowski',
+      status: 4,
+      hasAnyOrders: true,
+      id: 20
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

@@ -1,0 +1,19 @@
+{
+  result: {
+    userName: 'admin',
+    name: 'admin',
+    surname: 'admin',
+    emailAddress: 'admin@WEiI.com',
+    isActive: true,
+    fullName: 'admin admin',
+    lastLoginTime: null,
+    creationTime: '2021-11-17T16:45:35.0917894',
+    roleNames: [ 'ADMIN' ],
+    id: 1
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

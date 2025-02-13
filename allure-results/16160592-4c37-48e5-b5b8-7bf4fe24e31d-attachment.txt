@@ -1,0 +1,65 @@
+{
+  result: [
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-26T03:46:23.62',
+      subAccount: null,
+      costType: [Object],
+      id: 32
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-30T03:01:39.86',
+      subAccount: null,
+      costType: [Object],
+      id: 33
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-30T03:03:19.7966667',
+      subAccount: null,
+      costType: [Object],
+      id: 34
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-30T03:05:11.9233333',
+      subAccount: null,
+      costType: [Object],
+      id: 35
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-31T03:35:39.91',
+      subAccount: null,
+      costType: [Object],
+      id: 44
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-31T03:39:20.89',
+      subAccount: null,
+      costType: [Object],
+      id: 46
+    },
+    {
+      group: 0,
+      amount: 1000,
+      insertDate: '2025-01-31T03:43:25.9666667',
+      subAccount: null,
+      costType: [Object],
+      id: 49
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

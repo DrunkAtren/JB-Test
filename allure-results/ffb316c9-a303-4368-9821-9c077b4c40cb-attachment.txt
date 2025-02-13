@@ -1,0 +1,29 @@
+LONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORDLONGWORD
+{
+  result: null,
+  targetUrl: null,
+  success: false,
+  error: {
+    code: 0,
+    message: 'Your request is not valid!',
+    details: 'The following errors were detected during validation.\r\n' +
+      ' - The field TenancyName must be a string with a maximum length of 64.\r\n',
+    validationErrors: [ [Object] ]
+  },
+  unAuthorizedRequest: false,
+  __abp: true
+}
+{
+  result: null,
+  targetUrl: null,
+  success: false,
+  error: {
+    code: 0,
+    message: 'Your request is not valid!',
+    details: 'The following errors were detected during validation.\r\n' +
+      ' - The field TenancyName must be a string with a maximum length of 64.\r\n',
+    validationErrors: [ [Object] ]
+  },
+  unAuthorizedRequest: false,
+  __abp: true
+}

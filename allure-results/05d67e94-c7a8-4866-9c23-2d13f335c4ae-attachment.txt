@@ -1,0 +1,14 @@
+{
+  result: {
+    parentId: null,
+    identifier: 463,
+    name: 'Delegacje',
+    isActive: true,
+    id: 5
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

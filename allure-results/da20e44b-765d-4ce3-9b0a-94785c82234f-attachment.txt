@@ -1,0 +1,8 @@
+{
+  result: [ 2025, 2021, 2020, 2019 ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

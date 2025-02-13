@@ -1,0 +1,80 @@
+{
+  result: [
+    {
+      identifier: '500.03.444',
+      name: 'Tworzenie raportów dla aplikacji',
+      isActive: true,
+      id: 15
+    },
+    {
+      identifier: '500.03.503',
+      name: 'Publikacje naukowe 2020-2022',
+      isActive: false,
+      id: 16
+    },
+    {
+      identifier: '551.03.517',
+      name: 'Podróże małe i duże',
+      isActive: true,
+      id: 17
+    },
+    {
+      identifier: '502.03.519',
+      name: 'Promocja politechniki',
+      isActive: false,
+      id: 18
+    },
+    {
+      identifier: '500.03.522',
+      name: 'Aktywny stary projekt',
+      isActive: true,
+      id: 19
+    },
+    {
+      identifier: '500.03.523',
+      name: 'Stary projekt',
+      isActive: false,
+      id: 20
+    },
+    {
+      identifier: '13.03.Test1',
+      name: 'Test1',
+      isActive: true,
+      id: 31
+    },
+    {
+      identifier: '1.03.string',
+      name: 'string',
+      isActive: true,
+      id: 36
+    },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 37 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 38 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 39 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 40 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 41 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 42 },
+    {
+      identifier: '1.03.string',
+      name: 'string',
+      isActive: true,
+      id: 43
+    },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 44 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 45 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 46 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 47 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 48 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 49 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 50 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 51 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 52 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 53 },
+    { identifier: '1.03.Test', name: 'Test', isActive: true, id: 54 }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

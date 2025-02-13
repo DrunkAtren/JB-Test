@@ -1,0 +1,49 @@
+{
+  result: [
+    {
+      parentId: 1,
+      parent: [Object],
+      identifier: 60,
+      name: 'Usługi tłumaczenia / Usługi obce',
+      isActive: true,
+      id: 2
+    },
+    {
+      parentId: 1,
+      parent: [Object],
+      identifier: 14,
+      name: 'Netflix',
+      isActive: true,
+      id: 20
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 429,
+      name: 'Usługi',
+      isActive: true,
+      id: 1
+    },
+    {
+      parentId: 3,
+      parent: [Object],
+      identifier: 10,
+      name: 'Rzeczy podręczne',
+      isActive: true,
+      id: 4
+    },
+    {
+      parentId: null,
+      parent: null,
+      identifier: 411,
+      name: 'Materiały',
+      isActive: true,
+      id: 3
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

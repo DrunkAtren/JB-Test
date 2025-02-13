@@ -1,0 +1,18 @@
+{
+  result: [
+    {
+      amount: 2715,
+      insertDate: '2020-01-07T00:00:00',
+      description: 'Dotacja z budżetu marszałkowskiego na rok 2020',
+      subAccountId: 18,
+      identifier: '502.018',
+      name: 'Promocja politechniki',
+      id: 13
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

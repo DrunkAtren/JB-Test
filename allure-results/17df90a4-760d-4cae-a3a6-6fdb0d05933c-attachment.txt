@@ -1,0 +1,46 @@
+{
+  result: {
+    userName: 'Test1',
+    name: 'Test1',
+    surname: 'Test1',
+    emailAddress: 'Test1@example.com',
+    isActive: true,
+    fullName: 'Test1 Test1',
+    lastLoginTime: null,
+    creationTime: '2025-02-02T22:44:33.2381086+01:00',
+    roleNames: [ 'ADMIN' ],
+    id: 42
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}
+{
+  result: {
+    userName: 'Test1',
+    name: 'Test1',
+    surname: 'Test1',
+    emailAddress: 'Test1@example.com',
+    isActive: true,
+    fullName: 'Test1 Test1',
+    lastLoginTime: null,
+    creationTime: '2025-02-02T22:44:33.2381086+01:00',
+    roleNames: [ 'ADMIN' ],
+    id: 42
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}
+{
+  result: null,
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

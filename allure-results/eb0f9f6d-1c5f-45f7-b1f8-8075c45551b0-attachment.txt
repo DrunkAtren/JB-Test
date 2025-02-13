@@ -1,0 +1,33 @@
+{
+  result: [
+    {
+      parentId: null,
+      identifier: 463,
+      name: 'Delegacje',
+      isActive: true,
+      insertDate: '2020-11-03T00:00:00',
+      id: 5
+    },
+    {
+      parentId: 5,
+      identifier: 10,
+      name: 'Delegacje naukowe',
+      isActive: true,
+      insertDate: '2020-11-03T00:00:00',
+      id: 6
+    },
+    {
+      parentId: null,
+      identifier: 416,
+      name: 'Aparatura',
+      isActive: true,
+      insertDate: '2020-11-03T00:00:00',
+      id: 7
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

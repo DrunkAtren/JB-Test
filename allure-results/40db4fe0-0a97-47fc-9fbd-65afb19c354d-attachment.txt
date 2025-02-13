@@ -1,0 +1,14 @@
+{
+  result: null,
+  targetUrl: null,
+  success: false,
+  error: {
+    code: 0,
+    message: 'Your request is not valid!',
+    details: 'The following errors were detected during validation.\r\n' +
+      " - The value '111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' is not valid.\r\n",
+    validationErrors: [ [Object] ]
+  },
+  unAuthorizedRequest: false,
+  __abp: true
+}

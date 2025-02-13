@@ -1,0 +1,14 @@
+{
+  result: {
+    parentId: null,
+    identifier: 470,
+    name: 'Koszty pośrednie',
+    isActive: true,
+    id: 10
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

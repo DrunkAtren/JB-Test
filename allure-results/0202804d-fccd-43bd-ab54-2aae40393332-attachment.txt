@@ -1,0 +1,13 @@
+{
+  result: null,
+  targetUrl: null,
+  success: false,
+  error: {
+    code: 0,
+    message: "Your 'Existing Password' did not match the one on record.  Please try again or contact an administrator for assistance in resetting your password.",
+    details: null,
+    validationErrors: null
+  },
+  unAuthorizedRequest: false,
+  __abp: true
+}

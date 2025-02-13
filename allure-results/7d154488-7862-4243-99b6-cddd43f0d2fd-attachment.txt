@@ -1,0 +1,216 @@
+{
+  result: [
+    {
+      amount: 200,
+      description: 'Szkolenie z obsługi urządzeń',
+      invoiceDate: '2022-01-13T13:00:24.9115145',
+      orderId: 20,
+      subAccountId: null,
+      costTypeId: 2,
+      id: 28
+    },
+    {
+      amount: 1000,
+      description: 'Zakup 10 urządzeń Megatronix',
+      invoiceDate: '2022-01-13T13:00:24.9114734',
+      orderId: 20,
+      subAccountId: null,
+      costTypeId: 2,
+      id: 29
+    },
+    {
+      amount: 200,
+      description: 'Szkolenie z obsługi urządzeń',
+      invoiceDate: '2022-01-13T13:00:24.9115534',
+      orderId: 21,
+      subAccountId: null,
+      costTypeId: 4,
+      id: 30
+    },
+    {
+      amount: 500,
+      description: 'Zakup 10 urządzeń Megatronix',
+      invoiceDate: '2022-01-13T13:00:24.9115514',
+      orderId: 21,
+      subAccountId: null,
+      costTypeId: 4,
+      id: 31
+    },
+    {
+      amount: 150,
+      description: 'Szkolenie z obsługi urządzeń',
+      invoiceDate: '2022-01-13T13:00:24.9115549',
+      orderId: 22,
+      subAccountId: null,
+      costTypeId: 2,
+      id: 32
+    },
+    {
+      amount: 1200,
+      description: 'Zakup 10 urządzeń Megatronix',
+      invoiceDate: '2022-01-13T13:00:24.9115542',
+      orderId: 22,
+      subAccountId: null,
+      costTypeId: 2,
+      id: 33
+    },
+    {
+      amount: 200,
+      description: 'Szkolenie z obsługi urządzeń',
+      invoiceDate: '2022-01-13T13:00:24.9115562',
+      orderId: 23,
+      subAccountId: null,
+      costTypeId: 2,
+      id: 34
+    },
+    {
+      amount: 1000,
+      description: 'Zakup 10 urządzeń Megatronix',
+      invoiceDate: '2022-01-13T13:00:24.9115556',
+      orderId: 23,
+      subAccountId: null,
+      costTypeId: 2,
+      id: 35
+    },
+    {
+      amount: 600,
+      description: 'Wynajem ToiToiów',
+      invoiceDate: '2022-01-13T13:00:24.911558',
+      orderId: 24,
+      subAccountId: null,
+      costTypeId: 4,
+      id: 36
+    },
+    {
+      amount: 352,
+      description: 'Media: prąd, woda',
+      invoiceDate: '2022-01-13T13:00:24.9115575',
+      orderId: 24,
+      subAccountId: null,
+      costTypeId: 4,
+      id: 37
+    },
+    {
+      amount: 2915,
+      description: 'Wynajem sprzętu nagłaśniającego',
+      invoiceDate: '2022-01-13T13:00:24.9115569',
+      orderId: 24,
+      subAccountId: null,
+      costTypeId: 4,
+      id: 38
+    },
+    {
+      amount: 240,
+      description: 'Wydruk broszur na konferencję',
+      invoiceDate: '2022-01-13T13:00:24.9115599',
+      orderId: 25,
+      subAccountId: null,
+      costTypeId: 4,
+      id: 39
+    },
+    {
+      amount: 215,
+      description: 'Poczęstunek',
+      invoiceDate: '2022-01-13T13:00:24.9115591',
+      orderId: 25,
+      subAccountId: null,
+      costTypeId: 4,
+      id: 40
+    },
+    {
+      amount: 1200,
+      description: 'Kombinezon ochronny',
+      invoiceDate: '2022-01-13T13:00:24.9115625',
+      orderId: 30,
+      subAccountId: null,
+      costTypeId: 4,
+      id: 41
+    },
+    {
+      amount: 1000,
+      description: 'Maseczki, płyn dezynfekcyjny',
+      invoiceDate: '2022-01-13T13:00:24.9115619',
+      orderId: 30,
+      subAccountId: null,
+      costTypeId: 4,
+      id: 42
+    },
+    {
+      amount: 6305,
+      description: 'Bilet lotniczy do Wuhan',
+      invoiceDate: '2022-01-13T13:00:24.9115613',
+      orderId: 30,
+      subAccountId: null,
+      costTypeId: 4,
+      id: 43
+    },
+    {
+      amount: 10000,
+      description: 'Test1',
+      invoiceDate: '2025-01-26T03:16:53.942',
+      orderId: 20,
+      subAccountId: null,
+      costTypeId: 1,
+      id: 61
+    },
+    {
+      amount: 10000,
+      description: 'Test1',
+      invoiceDate: '2025-01-26T03:16:53.942',
+      orderId: 20,
+      subAccountId: null,
+      costTypeId: 1,
+      id: 65
+    },
+    {
+      amount: 10000,
+      description: 'Test2',
+      invoiceDate: '2025-01-26T03:16:53.942',
+      orderId: 20,
+      subAccountId: null,
+      costTypeId: 1,
+      id: 66
+    },
+    {
+      amount: 10000,
+      description: 'Test1',
+      invoiceDate: '2025-01-26T03:16:53.942',
+      orderId: 20,
+      subAccountId: null,
+      costTypeId: 1,
+      id: 67
+    },
+    {
+      amount: 10000,
+      description: 'Test2',
+      invoiceDate: '2025-01-26T03:16:53.942',
+      orderId: 20,
+      subAccountId: null,
+      costTypeId: 1,
+      id: 68
+    },
+    {
+      amount: 10000,
+      description: 'Test1',
+      invoiceDate: '2025-01-26T03:16:53.942',
+      orderId: 20,
+      subAccountId: null,
+      costTypeId: 1,
+      id: 69
+    },
+    {
+      amount: 10000,
+      description: 'Test1',
+      invoiceDate: '2025-01-26T03:16:53.942',
+      orderId: 20,
+      subAccountId: null,
+      costTypeId: 1,
+      id: 72
+    }
+  ],
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

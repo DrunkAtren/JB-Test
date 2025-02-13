@@ -1,0 +1,8 @@
+{
+  result: { identifier: 502, name: 'Studia podyplomowe', id: 2 },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

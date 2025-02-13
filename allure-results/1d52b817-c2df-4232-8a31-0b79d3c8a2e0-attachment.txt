@@ -1,0 +1,8 @@
+{
+  result: { identifier: 505, name: 'Projekty badawcze', id: 8 },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}

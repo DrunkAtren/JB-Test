@@ -1,0 +1,13 @@
+{
+  result: {
+    donationAmount: 2715,
+    orderAmount: 14267.71,
+    balanceAmount: -11552.71,
+    projectsCount: 23
+  },
+  targetUrl: null,
+  success: true,
+  error: null,
+  unAuthorizedRequest: false,
+  __abp: true
+}
